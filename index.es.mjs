@@ -8416,7 +8416,7 @@ const ze = /* @__PURE__ */ xn(Iu, [["render", Nu]]), Ru = { class: "information-
         const { inProgress: m, settings: w } = await as();
         n.value = w;
         const { widget: k } = w;
-        k && k.locale && k.l10n && (Rn.global.locale.value = k.locale, Rn.global.setLocaleMessage(k.locale, k.l10n)), r.value = m ? cn : ln;
+        k && k.locale && k.l10n && Object.keys(k.l10n).length && (Rn.global.locale.value = k.locale, Rn.global.setLocaleMessage(k.locale, k.l10n)), r.value = m ? cn : ln;
       } catch (m) {
         u(m);
       } finally {
