@@ -57,8 +57,8 @@ const as = async () => {
   }
 }, ls = async (e, t, n) => {
   console.debug("Loading data", e, t, n);
-  const o = await Dt() + Nt.OFFERS + "?";
-  if (!e || !t)
+  let o = await Dt() + Nt.OFFERS;
+  if (o = o.includes("?") ? o + "&" : o + "?", !e || !t)
     throw new Error("Invalid dates");
   const r = `${o}checkInDate=${e}&checkOutDate=${t}&promoCode=${n || ""}`;
   try {
