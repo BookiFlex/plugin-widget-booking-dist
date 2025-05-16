@@ -8312,7 +8312,7 @@ const Me = /* @__PURE__ */ wn(Id, [["render", Rd]]), Dd = { class: "information-
           a.value = !1;
         }
       }
-    }, f = Ee(() => r.value.length ? Gc(r.value.reservations[0].status) : "");
+    }, f = Ee(() => r.value.reservations.length ? Gc(r.value.reservations[0].status) : "");
     return je(() => t.sid, u), Jt(u), (d, b) => (L(), le(Gn, null, {
       default: z(() => [
         a.value ? (L(), le(Vn, { key: 0 })) : (L(), D(ue, { key: 1 }, [
