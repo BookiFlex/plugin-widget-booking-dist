@@ -1,4 +1,4 @@
-import { effectScope as Ur, ref as se, shallowRef as Yr, computed as be, watch as qe, isRef as jr, defineComponent as Bt, getCurrentInstance as Kt, h as Ho, Fragment as de, inject as ft, onMounted as Tt, onUnmounted as kn, createVNode as N, Text as Xr, createElementBlock as M, openBlock as C, renderSlot as ge, createBlock as ie, normalizeClass as Qe, withCtx as B, createElementVNode as w, renderList as Le, onBeforeUnmount as Gr, toDisplayString as D, unref as z, pushScopeId as Kr, popScopeId as Jr, nextTick as Zr, normalizeProps as Qr, guardReactiveProps as ea, resolveComponent as ii, mergeProps as xi, withScopeId as ta, withKeys as na, normalizeStyle as Mt, createCommentVNode as fe, resolveDynamicComponent as ia, withDirectives as Fe, vShow as It, createTextVNode as Q, toRefs as oa, reactive as oi, vModelText as cn, withModifiers as Wo, vModelSelect as ra, vModelCheckbox as aa, provide as Vo, toRaw as sa, onBeforeMount as la, defineCustomElement as ca, createApp as ua } from "vue";
+import { effectScope as Ur, ref as se, shallowRef as Yr, computed as be, watch as qe, isRef as jr, defineComponent as Bt, getCurrentInstance as Kt, h as Ho, Fragment as de, inject as ft, onMounted as Tt, onUnmounted as xn, createVNode as N, Text as Xr, createElementBlock as M, openBlock as C, renderSlot as ge, createBlock as ie, normalizeClass as Qe, withCtx as B, createElementVNode as w, renderList as Le, onBeforeUnmount as Gr, toDisplayString as D, unref as z, pushScopeId as Kr, popScopeId as Jr, nextTick as Zr, normalizeProps as Qr, guardReactiveProps as ea, resolveComponent as ii, mergeProps as xi, withScopeId as ta, withKeys as na, normalizeStyle as Mt, createCommentVNode as fe, resolveDynamicComponent as ia, withDirectives as Fe, vShow as It, createTextVNode as Q, toRefs as oa, reactive as oi, vModelText as ln, withModifiers as Wo, vModelSelect as ra, vModelCheckbox as aa, provide as Vo, toRaw as sa, onBeforeMount as la, defineCustomElement as ca, createApp as ua } from "vue";
 const St = {
   INIT: "bflex/v1/cart/init",
   OFFERS: "bflex/v1/offers",
@@ -445,7 +445,7 @@ function Na(e, t = {}) {
       R += y;
     return R;
   }
-  function en(v) {
+  function Qt(v) {
     let y = "";
     for (; ; ) {
       const R = v.currentChar();
@@ -471,7 +471,7 @@ function Na(e, t = {}) {
       R += y;
     return v.currentChar() === vt && p(ue.UNTERMINATED_CLOSING_BRACE, s(), 0), R;
   }
-  function tn(v) {
+  function en(v) {
     P(v);
     let y = "";
     return v.currentChar() === "-" ? (v.next(), y += `-${Ht(v)}`) : y += Ht(v), v.currentChar() === vt && p(ue.UNTERMINATED_CLOSING_BRACE, s(), 0), y;
@@ -483,11 +483,11 @@ function Na(e, t = {}) {
     P(v), k(v, "'");
     let y = "", R = "";
     for (; y = K(v, En); )
-      y === "\\" ? R += nn(v) : R += y;
+      y === "\\" ? R += tn(v) : R += y;
     const Y = v.currentChar();
     return Y === Me || Y === vt ? (p(ue.UNTERMINATED_SINGLE_QUOTE_IN_PLACEHOLDER, s(), 0), Y === Me && (v.next(), k(v, "'")), R) : (k(v, "'"), R);
   }
-  function nn(v) {
+  function tn(v) {
     const y = v.currentChar();
     switch (y) {
       case "\\":
@@ -514,13 +514,13 @@ function Na(e, t = {}) {
     }
     return `\\${y}${Y}`;
   }
-  function on(v) {
+  function nn(v) {
     return v !== "{" && v !== "}" && v !== ct && v !== Me;
   }
   function mt(v) {
     P(v);
     let y = "", R = "";
-    for (; y = K(v, on); )
+    for (; y = K(v, nn); )
       R += y;
     return R;
   }
@@ -530,7 +530,7 @@ function Na(e, t = {}) {
       R += y;
     return R;
   }
-  function rn(v) {
+  function on(v) {
     const y = (R) => {
       const Y = v.currentChar();
       return Y === "{" || Y === "@" || Y === "|" || Y === "(" || Y === ")" || !Y || Y === ct ? R : (R += Y, v.next(), y(R));
@@ -574,7 +574,7 @@ function Na(e, t = {}) {
         if (_e = I(v, y))
           return R = h(y, 4, Wt(v)), P(v), R;
         if (o = E(v, y))
-          return R = h(y, 5, tn(v)), P(v), R;
+          return R = h(y, 5, en(v)), P(v), R;
         if (a = F(v, y))
           return R = h(y, 6, Vt(v)), P(v), R;
         if (!_e && !o && !a)
@@ -611,7 +611,7 @@ function Na(e, t = {}) {
           /* TokenChars.LinkedDelimiter */
         );
       default:
-        return U(v) ? (Y = h(y, 1, $t(v)), y.braceNest = 0, y.inLinked = !1, Y) : q(v, y) || J(v, y) ? (P(v), pt(v, y)) : O(v, y) ? (P(v), h(y, 11, ht(v))) : G(v, y) ? (P(v), _e === "{" ? xe(v, y) || Y : h(y, 10, rn(v))) : (R === 7 && p(ue.INVALID_LINKED_FORMAT, s(), 0), y.braceNest = 0, y.inLinked = !1, rt(v, y));
+        return U(v) ? (Y = h(y, 1, $t(v)), y.braceNest = 0, y.inLinked = !1, Y) : q(v, y) || J(v, y) ? (P(v), pt(v, y)) : O(v, y) ? (P(v), h(y, 11, ht(v))) : G(v, y) ? (P(v), _e === "{" ? xe(v, y) || Y : h(y, 10, on(v))) : (R === 7 && p(ue.INVALID_LINKED_FORMAT, s(), 0), y.braceNest = 0, y.inLinked = !1, rt(v, y));
     }
   }
   function rt(v, y) {
@@ -639,13 +639,13 @@ function Na(e, t = {}) {
         if (U(v))
           return R = h(y, 1, $t(v)), y.braceNest = 0, y.inLinked = !1, R;
         if (ae(v))
-          return h(y, 0, en(v));
+          return h(y, 0, Qt(v));
         break;
       }
     }
     return R;
   }
-  function an() {
+  function rn() {
     const { currentType: v, offset: y, startLoc: R, endLoc: Y } = f;
     return f.lastType = v, f.lastOffset = y, f.lastStartLoc = R, f.lastEndLoc = Y, f.offset = r(), f.startLoc = s(), i.currentChar() === vt ? h(
       f,
@@ -654,7 +654,7 @@ function Na(e, t = {}) {
     ) : rt(i, f);
   }
   return {
-    nextToken: an,
+    nextToken: rn,
     currentOffset: r,
     currentPosition: s,
     context: u
@@ -1125,7 +1125,7 @@ function Ln(e, t) {
   const n = At(e, Qo);
   if (n != null)
     return n;
-  throw pn(t);
+  throw hn(t);
 }
 const er = ["m", "modifier"];
 function es(e) {
@@ -1136,7 +1136,7 @@ function ts(e) {
   const t = At(e, tr);
   if (t)
     return t;
-  throw pn(
+  throw hn(
     6
     /* NodeTypes.Linked */
   );
@@ -1159,7 +1159,7 @@ const nr = [
   ...Qo,
   ...Zo
 ];
-function pn(e) {
+function hn(e) {
   return new Error(`unhandled node type: ${e}`);
 }
 function Jn(e) {
@@ -1168,7 +1168,7 @@ function Jn(e) {
 function ns(e, t) {
   const n = Ka(t);
   if (n == null)
-    throw pn(
+    throw hn(
       0
       /* NodeTypes.Resource */
     );
@@ -1203,7 +1203,7 @@ function ai(e, t) {
         return e.interpolate(e.named(i.k));
       if (je(i, "key") && i.key)
         return e.interpolate(e.named(i.key));
-      throw pn(n);
+      throw hn(n);
     }
     case 5: {
       const i = t;
@@ -1211,7 +1211,7 @@ function ai(e, t) {
         return e.interpolate(e.list(i.i));
       if (je(i, "index") && Se(i.index))
         return e.interpolate(e.list(i.index));
-      throw pn(n);
+      throw hn(n);
     }
     case 6: {
       const i = t, r = es(i), s = ts(i);
@@ -1256,12 +1256,12 @@ function rs(e, t) {
       return Jn(e);
   }
 }
-let gn = null;
+let pn = null;
 function as(e) {
-  gn = e;
+  pn = e;
 }
 function ss(e, t, n) {
-  gn && gn.emit("i18n:init", {
+  pn && pn.emit("i18n:init", {
     timestamp: Date.now(),
     i18n: e,
     version: t,
@@ -1270,7 +1270,7 @@ function ss(e, t, n) {
 }
 const ls = /* @__PURE__ */ cs("function:translate");
 function cs(e) {
-  return (t) => gn && gn.emit(e, t);
+  return (t) => pn && pn.emit(e, t);
 }
 const ut = {
   INVALID_ARGUMENT: Ea,
@@ -1311,7 +1311,7 @@ function ds(e, t, n) {
   ])];
 }
 function ir(e, t, n) {
-  const i = W(n) ? n : vn, r = e;
+  const i = W(n) ? n : gn, r = e;
   r.__localeChainCache || (r.__localeChainCache = /* @__PURE__ */ new Map());
   let s = r.__localeChainCache.get(i);
   if (!s) {
@@ -1639,7 +1639,7 @@ function ws(e, t) {
   }
   return r;
 }
-const xs = "11.1.3", Yn = -1, vn = "en-US", Zi = "", Qi = (e) => `${e.charAt(0).toLocaleUpperCase()}${e.substr(1)}`;
+const xs = "11.1.3", Yn = -1, gn = "en-US", Zi = "", Qi = (e) => `${e.charAt(0).toLocaleUpperCase()}${e.substr(1)}`;
 function ks() {
   return {
     upper: (e, t) => t === "text" && W(e) ? e.toUpperCase() : t === "vnode" && ce(e) && "__v_isVNode" in e ? e.children.toUpperCase() : e,
@@ -1669,7 +1669,7 @@ const eo = (e) => {
 }, As = () => lr;
 let to = 0;
 function Ls(e = {}) {
-  const t = ve(e.onWarn) ? e.onWarn : Ta, n = W(e.version) ? e.version : xs, i = W(e.locale) || ve(e.locale) ? e.locale : vn, r = ve(i) ? vn : i, s = Ee(e.fallbackLocale) || ee(e.fallbackLocale) || W(e.fallbackLocale) || e.fallbackLocale === !1 ? e.fallbackLocale : r, l = ee(e.messages) ? e.messages : Qn(r), d = ee(e.datetimeFormats) ? e.datetimeFormats : Qn(r), f = ee(e.numberFormats) ? e.numberFormats : Qn(r), u = Ae(me(), e.modifiers, ks()), _ = e.pluralRules || me(), p = ve(e.missing) ? e.missing : null, h = le(e.missingWarn) || Jt(e.missingWarn) ? e.missingWarn : !0, x = le(e.fallbackWarn) || Jt(e.fallbackWarn) ? e.fallbackWarn : !0, k = !!e.fallbackFormat, S = !!e.unresolving, P = ve(e.postTranslation) ? e.postTranslation : null, g = ee(e.processor) ? e.processor : null, T = le(e.warnHtmlMessage) ? e.warnHtmlMessage : !0, I = !!e.escapeParameter, E = ve(e.messageCompiler) ? e.messageCompiler : or, F = ve(e.messageResolver) ? e.messageResolver : rr || bs, q = ve(e.localeFallbacker) ? e.localeFallbacker : ar || ds, O = ce(e.fallbackContext) ? e.fallbackContext : void 0, J = e, G = ce(J.__datetimeFormatters) ? J.__datetimeFormatters : /* @__PURE__ */ new Map(), U = ce(J.__numberFormatters) ? J.__numberFormatters : /* @__PURE__ */ new Map(), ae = ce(J.__meta) ? J.__meta : {};
+  const t = ve(e.onWarn) ? e.onWarn : Ta, n = W(e.version) ? e.version : xs, i = W(e.locale) || ve(e.locale) ? e.locale : gn, r = ve(i) ? gn : i, s = Ee(e.fallbackLocale) || ee(e.fallbackLocale) || W(e.fallbackLocale) || e.fallbackLocale === !1 ? e.fallbackLocale : r, l = ee(e.messages) ? e.messages : Qn(r), d = ee(e.datetimeFormats) ? e.datetimeFormats : Qn(r), f = ee(e.numberFormats) ? e.numberFormats : Qn(r), u = Ae(me(), e.modifiers, ks()), _ = e.pluralRules || me(), p = ve(e.missing) ? e.missing : null, h = le(e.missingWarn) || Jt(e.missingWarn) ? e.missingWarn : !0, x = le(e.fallbackWarn) || Jt(e.fallbackWarn) ? e.fallbackWarn : !0, k = !!e.fallbackFormat, S = !!e.unresolving, P = ve(e.postTranslation) ? e.postTranslation : null, g = ee(e.processor) ? e.processor : null, T = le(e.warnHtmlMessage) ? e.warnHtmlMessage : !0, I = !!e.escapeParameter, E = ve(e.messageCompiler) ? e.messageCompiler : or, F = ve(e.messageResolver) ? e.messageResolver : rr || bs, q = ve(e.localeFallbacker) ? e.localeFallbacker : ar || ds, O = ce(e.fallbackContext) ? e.fallbackContext : void 0, J = e, G = ce(J.__datetimeFormatters) ? J.__datetimeFormatters : /* @__PURE__ */ new Map(), U = ce(J.__numberFormatters) ? J.__numberFormatters : /* @__PURE__ */ new Map(), ae = ce(J.__meta) ? J.__meta : {};
   to++;
   const K = {
     version: n,
@@ -1706,7 +1706,7 @@ function Pi(e, t, n, i, r) {
   } else
     return t;
 }
-function ln(e, t, n) {
+function sn(e, t, n) {
   const i = e;
   i.__localeChainCache = /* @__PURE__ */ new Map(), e.localeFallbacker(e, n, t);
 }
@@ -2048,13 +2048,13 @@ function He(e, ...t) {
   return Un(e, null, void 0);
 }
 const ui = /* @__PURE__ */ Pt("__translateVNode"), di = /* @__PURE__ */ Pt("__datetimeParts"), fi = /* @__PURE__ */ Pt("__numberParts"), mr = Pt("__setPluralRules"), hr = /* @__PURE__ */ Pt("__injectWithOption"), mi = /* @__PURE__ */ Pt("__dispose");
-function yn(e) {
+function vn(e) {
   if (!ce(e) || et(e))
     return e;
   for (const t in e)
     if (je(e, t))
       if (!t.includes("."))
-        ce(e[t]) && yn(e[t]);
+        ce(e[t]) && vn(e[t]);
       else {
         const n = t.split("."), i = n.length - 1;
         let r = e, s = !1;
@@ -2069,7 +2069,7 @@ function yn(e) {
         }
         if (s || (et(r) ? nr.includes(n[i]) || delete e[t] : (r[n[i]] = e[t], delete e[t])), !et(r)) {
           const l = r[n[i]];
-          ce(l) && yn(l);
+          ce(l) && vn(l);
         }
       }
   return e;
@@ -2084,7 +2084,7 @@ function Ai(e, t) {
       W(d) && Nn(JSON.parse(d), l);
   }), r == null && s)
     for (const d in l)
-      je(l, d) && yn(l[d]);
+      je(l, d) && vn(l[d]);
   return l;
 }
 function pr(e) {
@@ -2133,7 +2133,7 @@ function Li(e = {}) {
   let l = le(e.inheritLocale) ? e.inheritLocale : !0;
   const d = s(
     // prettier-ignore
-    t && l ? t.locale.value : W(e.locale) ? e.locale : vn
+    t && l ? t.locale.value : W(e.locale) ? e.locale : gn
   ), f = s(
     // prettier-ignore
     t && l ? t.fallbackLocale.value : W(e.fallbackLocale) || Ee(e.fallbackLocale) || ee(e.fallbackLocale) || e.fallbackLocale === !1 ? e.fallbackLocale : d.value
@@ -2165,7 +2165,7 @@ function Li(e = {}) {
     a.datetimeFormats = _.value, a.numberFormats = p.value, a.__datetimeFormatters = ee(O) ? O.__datetimeFormatters : void 0, a.__numberFormatters = ee(O) ? O.__numberFormatters : void 0;
     const c = Ls(a);
     return i && eo(c), c;
-  })(), ln(O, d.value, f.value);
+  })(), sn(O, d.value, f.value);
   function G() {
     return [
       d.value,
@@ -2183,7 +2183,7 @@ function Li(e = {}) {
   }), ae = be({
     get: () => f.value,
     set: (a) => {
-      O.fallbackLocale = a, f.value = a, ln(O, d.value, a);
+      O.fallbackLocale = a, f.value = a, sn(O, d.value, a);
     }
   }), K = be(() => u.value), Te = /* @__PURE__ */ be(() => _.value), we = /* @__PURE__ */ be(() => p.value);
   function $e() {
@@ -2225,21 +2225,21 @@ function Li(e = {}) {
       throw He(Be.INVALID_ARGUMENT);
     return ot(c, m, Ae({ resolvedMessage: !0 }, b || {}));
   }
-  function en(...a) {
+  function Qt(...a) {
     return ye((c) => Reflect.apply(no, null, [c, ...a]), () => si(...a), "datetime format", (c) => Reflect.apply(c.d, c, [...a]), () => Zi, (c) => W(c));
   }
   function Wt(...a) {
     return ye((c) => Reflect.apply(oo, null, [c, ...a]), () => li(...a), "number format", (c) => Reflect.apply(c.n, c, [...a]), () => Zi, (c) => W(c));
   }
-  function tn(a) {
+  function en(a) {
     return a.map((c) => W(c) || Se(c) || le(c) ? co(String(c)) : c);
   }
   const Vt = {
-    normalize: tn,
+    normalize: en,
     interpolate: (a) => a,
     type: "vnode"
   };
-  function nn(...a) {
+  function tn(...a) {
     return ye((c) => {
       let m;
       const b = c;
@@ -2254,7 +2254,7 @@ function Li(e = {}) {
   function Ut(...a) {
     return ye((c) => Reflect.apply(oo, null, [c, ...a]), () => li(...a), "number format", (c) => c[fi](...a), fo, (c) => W(c) || Ee(c));
   }
-  function on(...a) {
+  function nn(...a) {
     return ye((c) => Reflect.apply(no, null, [c, ...a]), () => si(...a), "datetime format", (c) => c[di](...a), fo, (c) => W(c) || Ee(c));
   }
   function mt(a) {
@@ -2268,7 +2268,7 @@ function Li(e = {}) {
       return et(A) || Ve(A) || W(A);
     }, () => [a], "translate exists", (m) => Reflect.apply(m.te, m, [a, c]), js, (m) => le(m));
   }
-  function rn(a) {
+  function on(a) {
     let c = null;
     const m = ir(O, f.value, d.value);
     for (let b = 0; b < m.length; b++) {
@@ -2281,7 +2281,7 @@ function Li(e = {}) {
     return c;
   }
   function $t(a) {
-    const c = rn(a);
+    const c = on(a);
     return c ?? (t ? t.tm(a) || {} : {});
   }
   function xe(a) {
@@ -2291,7 +2291,7 @@ function Li(e = {}) {
     if (r) {
       const m = { [a]: c };
       for (const b in m)
-        je(m, b) && yn(m[b]);
+        je(m, b) && vn(m[b]);
       c = m[a];
     }
     u.value[a] = c, O.messages = u.value;
@@ -2301,10 +2301,10 @@ function Li(e = {}) {
     const m = { [a]: c };
     if (r)
       for (const b in m)
-        je(m, b) && yn(m[b]);
+        je(m, b) && vn(m[b]);
     c = m[a], Nn(c, u.value[a]), O.messages = u.value;
   }
-  function an(a) {
+  function rn(a) {
     return _.value[a] || {};
   }
   function v(a, c) {
@@ -2323,9 +2323,9 @@ function Li(e = {}) {
     p.value[a] = Ae(p.value[a] || {}, c), O.numberFormats = p.value, ro(O, a, c);
   }
   mo++, t && Fn && (qe(t.locale, (a) => {
-    l && (d.value = a, O.locale = a, ln(O, d.value, f.value));
+    l && (d.value = a, O.locale = a, sn(O, d.value, f.value));
   }), qe(t.fallbackLocale, (a) => {
-    l && (f.value = a, O.fallbackLocale = a, ln(O, d.value, f.value));
+    l && (f.value = a, O.fallbackLocale = a, sn(O, d.value, f.value));
   }));
   const o = {
     id: mo,
@@ -2335,7 +2335,7 @@ function Li(e = {}) {
       return l;
     },
     set inheritLocale(a) {
-      l = a, a && t && (d.value = t.locale.value, f.value = t.fallbackLocale.value, ln(O, d.value, f.value));
+      l = a, a && t && (d.value = t.locale.value, f.value = t.fallbackLocale.value, sn(O, d.value, f.value));
     },
     get availableLocales() {
       return Object.keys(u.value).sort();
@@ -2396,10 +2396,10 @@ function Li(e = {}) {
     setMissingHandler: Re,
     [mr]: mt
   };
-  return o.datetimeFormats = Te, o.numberFormats = we, o.rt = Ht, o.te = ht, o.tm = $t, o.d = en, o.n = Wt, o.getDateTimeFormat = an, o.setDateTimeFormat = v, o.mergeDateTimeFormat = y, o.getNumberFormat = R, o.setNumberFormat = Y, o.mergeNumberFormat = _e, o[hr] = n, o[ui] = nn, o[di] = on, o[fi] = Ut, o;
+  return o.datetimeFormats = Te, o.numberFormats = we, o.rt = Ht, o.te = ht, o.tm = $t, o.d = Qt, o.n = Wt, o.getDateTimeFormat = rn, o.setDateTimeFormat = v, o.mergeDateTimeFormat = y, o.getNumberFormat = R, o.setNumberFormat = Y, o.mergeNumberFormat = _e, o[hr] = n, o[ui] = tn, o[di] = nn, o[fi] = Ut, o;
 }
 function Gs(e) {
-  const t = W(e.locale) ? e.locale : vn, n = W(e.fallbackLocale) || Ee(e.fallbackLocale) || ee(e.fallbackLocale) || e.fallbackLocale === !1 ? e.fallbackLocale : t, i = ve(e.missing) ? e.missing : void 0, r = le(e.silentTranslationWarn) || Jt(e.silentTranslationWarn) ? !e.silentTranslationWarn : !0, s = le(e.silentFallbackWarn) || Jt(e.silentFallbackWarn) ? !e.silentFallbackWarn : !0, l = le(e.fallbackRoot) ? e.fallbackRoot : !0, d = !!e.formatFallbackMessages, f = ee(e.modifiers) ? e.modifiers : {}, u = e.pluralizationRules, _ = ve(e.postTranslation) ? e.postTranslation : void 0, p = W(e.warnHtmlInMessage) ? e.warnHtmlInMessage !== "off" : !0, h = !!e.escapeParameterHtml, x = le(e.sync) ? e.sync : !0;
+  const t = W(e.locale) ? e.locale : gn, n = W(e.fallbackLocale) || Ee(e.fallbackLocale) || ee(e.fallbackLocale) || e.fallbackLocale === !1 ? e.fallbackLocale : t, i = ve(e.missing) ? e.missing : void 0, r = le(e.silentTranslationWarn) || Jt(e.silentTranslationWarn) ? !e.silentTranslationWarn : !0, s = le(e.silentFallbackWarn) || Jt(e.silentFallbackWarn) ? !e.silentFallbackWarn : !0, l = le(e.fallbackRoot) ? e.fallbackRoot : !0, d = !!e.formatFallbackMessages, f = ee(e.modifiers) ? e.modifiers : {}, u = e.pluralizationRules, _ = ve(e.postTranslation) ? e.postTranslation : void 0, p = W(e.warnHtmlInMessage) ? e.warnHtmlInMessage !== "off" : !0, h = !!e.escapeParameterHtml, x = le(e.sync) ? e.sync : !0;
   let k = e.messages;
   if (ee(e.sharedMessages)) {
     const F = e.sharedMessages;
@@ -2923,7 +2923,7 @@ function dl(e, t = !1) {
 }
 function fl(e, t, n) {
   Tt(() => {
-  }, t), kn(() => {
+  }, t), xn(() => {
     const i = n;
     e.__deleteInstance(t);
     const r = i[mi];
@@ -3033,7 +3033,7 @@ const gl = {
       confirmationInfo: "You will receive a booking confirmation by email. The owner of the place may contact you by phone to clarify the details."
     },
     specialRequest: {
-      title: "Customer request",
+      title: "Special request",
       comment: "Comment",
       checkInOutTime: "Check-in/out Time",
       checkInTimeFrom: "Check-in time from",
@@ -3177,7 +3177,7 @@ const gl = {
   locale: "en",
   messages: gl,
   pluralizationRules: vl()
-}), un = "choose_accommodation", _r = "empty_cart", Rn = "booking_confirmation", xo = "reservation_details", ei = "cancel_reservation", Qt = (e, t) => {
+}), cn = "choose_accommodation", _r = "empty_cart", Rn = "booking_confirmation", xo = "reservation_details", ei = "cancel_reservation", kn = (e, t) => {
   const n = e.__vccOpts || e;
   for (const [i, r] of t)
     n[i] = r;
@@ -3188,11 +3188,11 @@ function bl(e, t) {
     ge(e.$slots, "default")
   ]);
 }
-const Ge = /* @__PURE__ */ Qt(yl, [["render", bl]]), wl = {}, xl = { class: "divider" };
+const Ge = /* @__PURE__ */ kn(yl, [["render", bl]]), wl = {}, xl = { class: "divider" };
 function kl(e, t) {
   return C(), M("div", xl);
 }
-const Pe = /* @__PURE__ */ Qt(wl, [["render", kl]]), Tl = { class: "header" }, Sl = { class: "content" }, El = { class: "amenities" }, Cl = { class: "footer" }, Tn = {
+const Pe = /* @__PURE__ */ kn(wl, [["render", kl]]), Tl = { class: "header" }, Sl = { class: "content" }, El = { class: "amenities" }, Cl = { class: "footer" }, Tn = {
   __name: "BflexSkeletonLoader",
   props: {
     isResult: {
@@ -3533,7 +3533,7 @@ function Ol() {
           m == 39 && o.nextSlide(), m == 37 && o.prevSlide(), m == 27 && o.close();
         } });
       }
-      var en = r(function o(a, c) {
+      var Qt = r(function o(a, c) {
         var m = this, b = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : null;
         if (n(this, o), this.img = a, this.slide = c, this.onclose = b, this.img.setZoomEvents) return !1;
         this.active = !1, this.zoomedIn = !1, this.dragging = !1, this.currentX = null, this.currentY = null, this.initialX = null, this.initialY = null, this.xOffset = 0, this.yOffset = 0, this.img.addEventListener("mousedown", function(A) {
@@ -3627,7 +3627,7 @@ function Ol() {
         var m = arguments.length > 3 && arguments[3] !== void 0 && arguments[3];
         o.style.transition = m ? "all .2s ease" : "", o.style.transform = "translate3d(".concat(a, "px, ").concat(c, "px, 0)");
       } }]);
-      function tn(o, a, c, m) {
+      function en(o, a, c, m) {
         var b = o.querySelector(".gslide-media"), A = new Image(), L = "gSlideTitle_" + c, $ = "gSlideDesc_" + c;
         A.addEventListener("load", function() {
           U(m) && m();
@@ -3661,7 +3661,7 @@ function Ol() {
         var a = S(o.target, ".gslide-media");
         o.type === "enterfullscreen" && h(a, "fullscreen"), o.type === "exitfullscreen" && x(a, "fullscreen");
       }
-      function nn(o, a, c, m) {
+      function tn(o, a, c, m) {
         var b, A = this, L = o.querySelector(".gslide-media"), $ = !(!oe(a, "href") || !a.href) && a.href.split("#").pop().trim(), V = !(!oe(a, "content") || !a.content) && a.content;
         if (V && (ae(V) && (b = E('<div class="ginlined-content">'.concat(V, "</div>"))), K(V))) {
           V.style.display == "none" && (V.style.display = "block");
@@ -3688,7 +3688,7 @@ function Ol() {
         }({ url: a.href, callback: m });
         b.parentNode.style.maxWidth = a.width, b.parentNode.style.height = a.height, b.appendChild(A);
       }
-      var on = r(function o() {
+      var nn = r(function o() {
         var a = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : {};
         n(this, o), this.defaults = { href: "", sizes: "", srcset: "", title: "", type: "", videoProvider: "", description: "", alt: "", descPosition: "bottom", effect: "", width: "", height: "", content: !1, zoomable: !0, draggable: !0 }, $e(a) && (this.defaults = f(this.defaults, a));
       }, [{ key: "sourceType", value: function(o) {
@@ -3759,9 +3759,9 @@ function Ol() {
         if (U(m.afterSlideLoad) && (Z = function() {
           U(c) && c(), m.afterSlideLoad({ index: o.index, slide: a, player: o.instance.getSlidePlayerInstance(o.index) });
         }), b.title == "" && b.description == "" ? X && X.parentNode.parentNode.removeChild(X.parentNode) : (H && b.title !== "" ? (H.id = te, H.innerHTML = b.title) : H.parentNode.removeChild(H), j && b.description !== "" ? (j.id = ne, A && m.moreLength > 0 ? (b.smallDescription = this.slideShortDesc(b.description, m.moreLength, m.moreText), j.innerHTML = b.smallDescription, this.descriptionEvents(j, b)) : j.innerHTML = b.description) : j.parentNode.removeChild(j), h(V.parentNode, "desc-".concat($)), h(X.parentNode, "description-".concat($))), h(V, "gslide-".concat(L)), h(a, "loaded"), L !== "video") {
-          if (L !== "external") return L === "inline" ? (nn.apply(this.instance, [a, b, this.index, Z]), void (b.draggable && new Wt({ dragEl: a.querySelector(".gslide-inline"), toleranceX: m.dragToleranceX, toleranceY: m.dragToleranceY, slide: a, instance: this.instance }))) : void (L !== "image" ? U(Z) && Z() : tn(a, b, this.index, function() {
+          if (L !== "external") return L === "inline" ? (tn.apply(this.instance, [a, b, this.index, Z]), void (b.draggable && new Wt({ dragEl: a.querySelector(".gslide-inline"), toleranceX: m.dragToleranceX, toleranceY: m.dragToleranceY, slide: a, instance: this.instance }))) : void (L !== "image" ? U(Z) && Z() : en(a, b, this.index, function() {
             var ke = a.querySelector("img");
-            b.draggable && new Wt({ dragEl: ke, toleranceX: m.dragToleranceX, toleranceY: m.dragToleranceY, slide: a, instance: o.instance }), b.zoomable && ke.naturalWidth > ke.offsetWidth && (h(ke, "zoomable"), new en(ke, a, function() {
+            b.draggable && new Wt({ dragEl: ke, toleranceX: m.dragToleranceX, toleranceY: m.dragToleranceY, slide: a, instance: o.instance }), b.zoomable && ke.naturalWidth > ke.offsetWidth && (h(ke, "zoomable"), new Qt(ke, a, function() {
               o.instance.resize();
             })), U(Z) && Z();
           }));
@@ -3792,13 +3792,13 @@ function Ol() {
         return E(this.instance.settings.slideHTML);
       } }, { key: "getConfig", value: function() {
         K(this.element) || this.element.hasOwnProperty("draggable") || (this.element.draggable = this.instance.settings.draggable);
-        var o = new on(this.instance.settings.slideExtraAttributes);
+        var o = new nn(this.instance.settings.slideExtraAttributes);
         return this.slideConfig = o.parseConfig(this.element, this.instance.settings), this.slideConfig;
       } }]);
       function ht(o) {
         return Math.sqrt(o.x * o.x + o.y * o.y);
       }
-      function rn(o, a) {
+      function on(o, a) {
         var c = function(m, b) {
           var A = ht(m) * ht(b);
           if (A === 0) return 0;
@@ -3852,7 +3852,7 @@ function Ol() {
           var a = this.preV, c = o.touches.length, m = o.touches[0].pageX, b = o.touches[0].pageY;
           if (this.isDoubleTap = !1, c > 1) {
             var A = o.touches[1].pageX, L = o.touches[1].pageY, $ = { x: o.touches[1].pageX - m, y: o.touches[1].pageY - b };
-            a.x !== null && (this.pinchStartLen > 0 && (o.zoom = ht($) / this.pinchStartLen, this.pinch.dispatch(o, this.element)), o.angle = rn($, a), this.rotate.dispatch(o, this.element)), a.x = $.x, a.y = $.y, this.x2 !== null && this.sx2 !== null ? (o.deltaX = (m - this.x2 + A - this.sx2) / 2, o.deltaY = (b - this.y2 + L - this.sy2) / 2) : (o.deltaX = 0, o.deltaY = 0), this.twoFingerPressMove.dispatch(o, this.element), this.sx2 = A, this.sy2 = L;
+            a.x !== null && (this.pinchStartLen > 0 && (o.zoom = ht($) / this.pinchStartLen, this.pinch.dispatch(o, this.element)), o.angle = on($, a), this.rotate.dispatch(o, this.element)), a.x = $.x, a.y = $.y, this.x2 !== null && this.sx2 !== null ? (o.deltaX = (m - this.x2 + A - this.sx2) / 2, o.deltaY = (b - this.y2 + L - this.sy2) / 2) : (o.deltaX = 0, o.deltaY = 0), this.twoFingerPressMove.dispatch(o, this.element), this.sx2 = A, this.sy2 = L;
           } else {
             if (this.x2 !== null) {
               o.deltaX = m - this.x2, o.deltaY = b - this.y2;
@@ -3901,9 +3901,9 @@ function Ol() {
           x(m, "greset");
         } }), m.style.opacity = "", A && (A.style.opacity = "");
       }
-      function an(o) {
+      function rn(o) {
         if (o.events.hasOwnProperty("touch")) return !1;
-        var a, c, m, b = F(), A = b.width, L = b.height, $ = !1, V = null, H = null, j = null, X = !1, Z = 1, te = 1, ne = !1, ke = !1, We = null, ze = null, at = null, Ne = null, st = 0, lt = 0, sn = !1, Yt = !1, Ke = {}, Je = {}, Bi = 0, zi = 0, Br = document.getElementById("glightbox-slider"), Cn = document.querySelector(".goverlay"), zr = new pt(Br, { touchStart: function(pe) {
+        var a, c, m, b = F(), A = b.width, L = b.height, $ = !1, V = null, H = null, j = null, X = !1, Z = 1, te = 1, ne = !1, ke = !1, We = null, ze = null, at = null, Ne = null, st = 0, lt = 0, an = !1, Yt = !1, Ke = {}, Je = {}, Bi = 0, zi = 0, Br = document.getElementById("glightbox-slider"), Cn = document.querySelector(".goverlay"), zr = new pt(Br, { touchStart: function(pe) {
           if ($ = !0, (k(pe.targetTouches[0].target, "ginner-container") || S(pe.targetTouches[0].target, ".gslide-desc") || pe.targetTouches[0].target.nodeName.toLowerCase() == "a") && ($ = !1), S(pe.targetTouches[0].target, ".gslide-inline") && !k(pe.targetTouches[0].target.parentNode, "gslide-inline") && ($ = !1), $) {
             if (Je = pe.targetTouches[0], Ke.pageX = pe.targetTouches[0].pageX, Ke.pageY = pe.targetTouches[0].pageY, Bi = pe.targetTouches[0].clientX, zi = pe.targetTouches[0].clientY, V = o.activeSlide, H = V.querySelector(".gslide-media"), m = V.querySelector(".gslide-inline"), j = null, k(H, "gslide-image") && (j = H.querySelector("img")), (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) > 769 && (H = V.querySelector(".ginner-container")), x(Cn, "greset"), pe.pageX > 20 && pe.pageX < window.innerWidth - 20) return;
             pe.preventDefault();
@@ -3916,7 +3916,7 @@ function Ol() {
             }
             X = !0;
             var gt, Pn = pe.targetTouches[0].clientX, Hr = pe.targetTouches[0].clientY, Wr = Bi - Pn, Vr = zi - Hr;
-            if (Math.abs(Wr) > Math.abs(Vr) ? (sn = !1, Yt = !0) : (Yt = !1, sn = !0), a = Je.pageX - Ke.pageX, st = 100 * a / A, c = Je.pageY - Ke.pageY, lt = 100 * c / L, sn && j && (gt = 1 - Math.abs(c) / L, Cn.style.opacity = gt, o.settings.touchFollowAxis && (st = 0)), Yt && (gt = 1 - Math.abs(a) / A, H.style.opacity = gt, o.settings.touchFollowAxis && (lt = 0)), !j) return g(H, "translate3d(".concat(st, "%, 0, 0)"));
+            if (Math.abs(Wr) > Math.abs(Vr) ? (an = !1, Yt = !0) : (Yt = !1, an = !0), a = Je.pageX - Ke.pageX, st = 100 * a / A, c = Je.pageY - Ke.pageY, lt = 100 * c / L, an && j && (gt = 1 - Math.abs(c) / L, Cn.style.opacity = gt, o.settings.touchFollowAxis && (st = 0)), Yt && (gt = 1 - Math.abs(a) / A, H.style.opacity = gt, o.settings.touchFollowAxis && (lt = 0)), !j) return g(H, "translate3d(".concat(st, "%, 0, 0)"));
             g(H, "translate3d(".concat(st, "%, ").concat(lt, "%, 0)"));
           }
         }, touchEnd: function() {
@@ -4005,7 +4005,7 @@ function Ol() {
           var L = document.createElement("style");
           L.type = "text/css", L.className = "gcss-styles", L.innerText = ".gscrollbar-fixer {margin-right: ".concat(A, "px}"), document.head.appendChild(L), h(b, "gscrollbar-fixer");
         }
-        h(b, "glightbox-open"), h(R, "glightbox-open"), v && (h(document.body, "glightbox-mobile"), this.settings.slideEffect = "slide"), this.showSlide(c, !0), this.elements.length === 1 ? (h(this.prevButton, "glightbox-button-hidden"), h(this.nextButton, "glightbox-button-hidden")) : (x(this.prevButton, "glightbox-button-hidden"), x(this.nextButton, "glightbox-button-hidden")), this.lightboxOpen = !0, this.trigger("open"), U(this.settings.onOpen) && this.settings.onOpen(), y && this.settings.touchNavigation && an(this), this.settings.keyboardNavigation && Ht(this);
+        h(b, "glightbox-open"), h(R, "glightbox-open"), v && (h(document.body, "glightbox-mobile"), this.settings.slideEffect = "slide"), this.showSlide(c, !0), this.elements.length === 1 ? (h(this.prevButton, "glightbox-button-hidden"), h(this.nextButton, "glightbox-button-hidden")) : (x(this.prevButton, "glightbox-button-hidden"), x(this.nextButton, "glightbox-button-hidden")), this.lightboxOpen = !0, this.trigger("open"), U(this.settings.onOpen) && this.settings.onOpen(), y && this.settings.touchNavigation && rn(this), this.settings.keyboardNavigation && Ht(this);
       } }, { key: "openAt", value: function() {
         var o = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : 0;
         this.open(null, o);
@@ -4216,7 +4216,7 @@ function Ol() {
               }
               var at = ne.split(":"), Ne = this.settings.videosWidth, st = this.settings.videosWidth, lt = (st = ye(Ne) || Ne.indexOf("px") !== -1 ? parseInt(Ne) : Ne.indexOf("vw") !== -1 ? A * parseInt(Ne) / 100 : Ne.indexOf("vh") !== -1 ? L * parseInt(Ne) / 100 : Ne.indexOf("%") !== -1 ? A * parseInt(Ne) / 100 : parseInt(c.clientWidth)) / (parseInt(at[0]) / parseInt(at[1]));
               if (lt = Math.floor(lt), $ && (L -= b.offsetHeight), st > A || lt > L || L < lt && A > st) {
-                var sn = c.offsetWidth, Yt = c.offsetHeight, Ke = L / Yt, Je = { width: sn * Ke, height: Yt * Ke };
+                var an = c.offsetWidth, Yt = c.offsetHeight, Ke = L / Yt, Je = { width: an * Ke, height: Yt * Ke };
                 c.parentNode.setAttribute("style", "max-width: ".concat(Je.width, "px")), $ && b.setAttribute("style", "max-width: ".concat(Je.width, "px;"));
               } else c.parentNode.style.maxWidth = "".concat(Ne), $ && b.setAttribute("style", "max-width: ".concat(Ne, ";"));
             }
@@ -4391,7 +4391,7 @@ const Nl = /* @__PURE__ */ Ll(Il), Rl = {
       ])
     ]));
   }
-}, Wl = ["top", "right", "bottom", "left"], To = ["start", "end"], So = /* @__PURE__ */ Wl.reduce((e, t) => e.concat(t, t + "-" + To[0], t + "-" + To[1]), []), _n = Math.min, Nt = Math.max, Vl = {
+}, Wl = ["top", "right", "bottom", "left"], To = ["start", "end"], So = /* @__PURE__ */ Wl.reduce((e, t) => e.concat(t, t + "-" + To[0], t + "-" + To[1]), []), yn = Math.min, Nt = Math.max, Vl = {
   left: "right",
   right: "left",
   bottom: "top",
@@ -4401,7 +4401,7 @@ const Nl = /* @__PURE__ */ Ll(Il), Rl = {
   end: "start"
 };
 function pi(e, t, n) {
-  return Nt(e, _n(t, n));
+  return Nt(e, yn(t, n));
 }
 function zt(e, t) {
   return typeof e == "function" ? e(t) : e;
@@ -4475,7 +4475,7 @@ function kr(e) {
     left: e
   };
 }
-function dn(e) {
+function un(e) {
   const {
     x: t,
     y: n,
@@ -4618,7 +4618,7 @@ async function jn(e, t) {
     elementContext: p = "floating",
     altBoundary: h = !1,
     padding: x = 0
-  } = zt(t, e), k = kr(x), P = d[h ? p === "floating" ? "reference" : "floating" : p], g = dn(await s.getClippingRect({
+  } = zt(t, e), k = kr(x), P = d[h ? p === "floating" ? "reference" : "floating" : p], g = un(await s.getClippingRect({
     element: (n = await (s.isElement == null ? void 0 : s.isElement(P))) == null || n ? P : P.contextElement || await (s.getDocumentElement == null ? void 0 : s.getDocumentElement(d.floating)),
     boundary: u,
     rootBoundary: _,
@@ -4634,7 +4634,7 @@ async function jn(e, t) {
   } : {
     x: 1,
     y: 1
-  }, F = dn(s.convertOffsetParentRelativeRectToViewportRelativeRect ? await s.convertOffsetParentRelativeRectToViewportRelativeRect({
+  }, F = un(s.convertOffsetParentRelativeRectToViewportRelativeRect ? await s.convertOffsetParentRelativeRectToViewportRelativeRect({
     elements: d,
     rect: T,
     offsetParent: I,
@@ -4671,7 +4671,7 @@ const Jl = (e) => ({
     }, x = Ii(r), k = Oi(x), S = await l.getDimensions(u), P = x === "y", g = P ? "top" : "left", T = P ? "bottom" : "right", I = P ? "clientHeight" : "clientWidth", E = s.reference[k] + s.reference[x] - h[x] - s.floating[k], F = h[x] - s.reference[x], q = await (l.getOffsetParent == null ? void 0 : l.getOffsetParent(u));
     let O = q ? q[I] : 0;
     (!O || !await (l.isElement == null ? void 0 : l.isElement(q))) && (O = d.floating[I] || s.floating[k]);
-    const J = E / 2 - F / 2, G = O / 2 - S[k] / 2 - 1, U = _n(p[g], G), ae = _n(p[T], G), K = U, Te = O - S[k] - ae, we = O / 2 - S[k] / 2 + J, $e = pi(K, we, Te), he = !f.arrow && Xe(r) != null && we !== $e && s.reference[k] / 2 - (we < K ? U : ae) - S[k] / 2 < 0, oe = he ? we < K ? we - K : we - Te : 0;
+    const J = E / 2 - F / 2, G = O / 2 - S[k] / 2 - 1, U = yn(p[g], G), ae = yn(p[T], G), K = U, Te = O - S[k] - ae, we = O / 2 - S[k] / 2 + J, $e = pi(K, we, Te), he = !f.arrow && Xe(r) != null && we !== $e && s.reference[k] / 2 - (we < K ? U : ae) - S[k] / 2 < 0, oe = he ? we < K ? we - K : we - Te : 0;
     return {
       [x]: h[x] + oe,
       data: {
@@ -4962,7 +4962,7 @@ const nc = function(e) {
       } = s.floating;
       let P, g;
       p === "top" || p === "bottom" ? (P = p, g = h === (await (l.isRTL == null ? void 0 : l.isRTL(d.floating)) ? "start" : "end") ? "left" : "right") : (g = p, P = h === "end" ? "top" : "bottom");
-      const T = S - _.top - _.bottom, I = k - _.left - _.right, E = _n(S - _[P], T), F = _n(k - _[g], I), q = !t.middlewareData.shift;
+      const T = S - _.top - _.bottom, I = k - _.left - _.right, E = yn(S - _[P], T), F = yn(k - _[g], I), q = !t.middlewareData.shift;
       let O = E, J = F;
       if ((n = t.middlewareData.shift) != null && n.enabled.x && (J = I), (i = t.middlewareData.shift) != null && i.enabled.y && (O = T), q && !h) {
         const U = Nt(_.left, 0), ae = Nt(_.right, 0), K = Nt(_.top, 0), Te = Nt(_.bottom, 0);
@@ -4989,7 +4989,7 @@ function Ue(e) {
 function tt(e) {
   return Ue(e).getComputedStyle(e);
 }
-const Co = Math.min, fn = Math.max, Hn = Math.round;
+const Co = Math.min, dn = Math.max, Hn = Math.round;
 function Tr(e) {
   const t = tt(e);
   let n = parseFloat(t.width), i = parseFloat(t.height);
@@ -5048,7 +5048,7 @@ function Gt(e) {
   let l = (s ? Hn(n.width) : n.width) / i, d = (s ? Hn(n.height) : n.height) / r;
   return l && Number.isFinite(l) || (l = 1), d && Number.isFinite(d) || (d = 1), { x: l, y: d };
 }
-function bn(e, t, n, i) {
+function _n(e, t, n, i) {
   var r, s;
   t === void 0 && (t = !1), n === void 0 && (n = !1);
   const l = e.getBoundingClientRect(), d = Pr(e);
@@ -5073,15 +5073,15 @@ function Gn(e) {
   return bt(e) ? { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop } : { scrollLeft: e.pageXOffset, scrollTop: e.pageYOffset };
 }
 function Lr(e) {
-  return bn(wt(e)).left + Gn(e).scrollLeft;
+  return _n(wt(e)).left + Gn(e).scrollLeft;
 }
-function wn(e) {
+function bn(e) {
   if (xt(e) === "html") return e;
   const t = e.assignedSlot || e.parentNode || Po(e) && e.host || wt(e);
   return Po(t) ? t.host : t;
 }
 function $r(e) {
-  const t = wn(e);
+  const t = bn(e);
   return Ni(t) ? t.ownerDocument.body : nt(t) && Xn(t) ? t : $r(t);
 }
 function Wn(e, t) {
@@ -5091,7 +5091,7 @@ function Wn(e, t) {
   return r ? t.concat(s, s.visualViewport || [], Xn(i) ? i : []) : t.concat(i, Wn(i));
 }
 function Ao(e, t, n) {
-  return t === "viewport" ? dn(function(i, r) {
+  return t === "viewport" ? un(function(i, r) {
     const s = Ue(i), l = wt(i), d = s.visualViewport;
     let f = l.clientWidth, u = l.clientHeight, _ = 0, p = 0;
     if (d) {
@@ -5100,14 +5100,14 @@ function Ao(e, t, n) {
       (h || !h && r === "fixed") && (_ = d.offsetLeft, p = d.offsetTop);
     }
     return { width: f, height: u, x: _, y: p };
-  }(e, n)) : bt(t) ? dn(function(i, r) {
-    const s = bn(i, !0, r === "fixed"), l = s.top + i.clientTop, d = s.left + i.clientLeft, f = nt(i) ? Gt(i) : { x: 1, y: 1 };
+  }(e, n)) : bt(t) ? un(function(i, r) {
+    const s = _n(i, !0, r === "fixed"), l = s.top + i.clientTop, d = s.left + i.clientLeft, f = nt(i) ? Gt(i) : { x: 1, y: 1 };
     return { width: i.clientWidth * f.x, height: i.clientHeight * f.y, x: d * f.x, y: l * f.y };
-  }(t, n)) : dn(function(i) {
-    const r = wt(i), s = Gn(i), l = i.ownerDocument.body, d = fn(r.scrollWidth, r.clientWidth, l.scrollWidth, l.clientWidth), f = fn(r.scrollHeight, r.clientHeight, l.scrollHeight, l.clientHeight);
+  }(t, n)) : un(function(i) {
+    const r = wt(i), s = Gn(i), l = i.ownerDocument.body, d = dn(r.scrollWidth, r.clientWidth, l.scrollWidth, l.clientWidth), f = dn(r.scrollHeight, r.clientHeight, l.scrollHeight, l.clientHeight);
     let u = -s.scrollLeft + Lr(i);
     const _ = -s.scrollTop;
-    return tt(l).direction === "rtl" && (u += fn(r.clientWidth, l.clientWidth) - d), { width: d, height: f, x: u, y: _ };
+    return tt(l).direction === "rtl" && (u += dn(r.clientWidth, l.clientWidth) - d), { width: d, height: f, x: u, y: _ };
   }(wt(e)));
 }
 function Lo(e) {
@@ -5118,20 +5118,20 @@ function $o(e) {
   let n = Lo(e);
   for (; n && rc(n) && tt(n).position === "static"; ) n = Lo(n);
   return n && (xt(n) === "html" || xt(n) === "body" && tt(n).position === "static" && !gi(n)) ? t : n || function(i) {
-    let r = wn(i);
+    let r = bn(i);
     for (; nt(r) && !Ni(r); ) {
       if (gi(r)) return r;
-      r = wn(r);
+      r = bn(r);
     }
     return null;
   }(e) || t;
 }
 function ac(e, t, n) {
-  const i = nt(t), r = wt(t), s = bn(e, !0, n === "fixed", t);
+  const i = nt(t), r = wt(t), s = _n(e, !0, n === "fixed", t);
   let l = { scrollLeft: 0, scrollTop: 0 };
   const d = { x: 0, y: 0 };
   if (i || !i && n !== "fixed") if ((xt(t) !== "body" || Xn(r)) && (l = Gn(t)), nt(t)) {
-    const f = bn(t, !0);
+    const f = _n(t, !0);
     d.x = f.x + t.clientLeft, d.y = f.y + t.clientTop;
   } else r && (d.x = Lr(r));
   return { x: s.left + l.scrollLeft - d.x, y: s.top + l.scrollTop - d.y, width: s.width, height: s.height };
@@ -5143,15 +5143,15 @@ const sc = { getClippingRect: function(e) {
     if (p) return p;
     let h = Wn(u).filter((P) => bt(P) && xt(P) !== "body"), x = null;
     const k = tt(u).position === "fixed";
-    let S = k ? wn(u) : u;
+    let S = k ? bn(u) : u;
     for (; bt(S) && !Ni(S); ) {
       const P = tt(S), g = gi(S);
-      (k ? g || x : g || P.position !== "static" || !x || !["absolute", "fixed"].includes(x.position)) ? x = P : h = h.filter((T) => T !== S), S = wn(S);
+      (k ? g || x : g || P.position !== "static" || !x || !["absolute", "fixed"].includes(x.position)) ? x = P : h = h.filter((T) => T !== S), S = bn(S);
     }
     return _.set(u, h), h;
   }(t, this._c) : [].concat(n), l = [...s, i], d = l[0], f = l.reduce((u, _) => {
     const p = Ao(t, _, r);
-    return u.top = fn(p.top, u.top), u.right = Co(p.right, u.right), u.bottom = Co(p.bottom, u.bottom), u.left = fn(p.left, u.left), u;
+    return u.top = dn(p.top, u.top), u.right = Co(p.right, u.right), u.bottom = Co(p.bottom, u.bottom), u.left = dn(p.left, u.left), u;
   }, Ao(t, d, r));
   return { width: f.right - f.left, height: f.bottom - f.top, x: f.left, y: f.top };
 }, convertOffsetParentRelativeRectToViewportRelativeRect: function(e) {
@@ -5161,7 +5161,7 @@ const sc = { getClippingRect: function(e) {
   let l = { scrollLeft: 0, scrollTop: 0 }, d = { x: 1, y: 1 };
   const f = { x: 0, y: 0 };
   if ((r || !r && i !== "fixed") && ((xt(n) !== "body" || Xn(s)) && (l = Gn(n)), nt(n))) {
-    const u = bn(n);
+    const u = _n(n);
     d = Gt(n), f.x = u.x + n.clientLeft, f.y = u.y + n.clientTop;
   }
   return { width: t.width * d.x, height: t.height * d.y, x: t.x * d.x - l.scrollLeft * d.x + f.x, y: t.y * d.y - l.scrollTop * d.y + f.y };
@@ -5276,13 +5276,13 @@ function Oo(e) {
   while (n);
   return t;
 }
-let xn = !1;
+let wn = !1;
 if (typeof window < "u") {
-  xn = !1;
+  wn = !1;
   try {
     const e = Object.defineProperty({}, "passive", {
       get() {
-        xn = !0;
+        wn = !0;
       }
     });
     window.addEventListener("test", null, e);
@@ -5836,7 +5836,7 @@ const ni = "__floating-vue__popper", Ir = () => Bt({
       this.$_registerTriggerListeners(this.$_targetNodes, No, this.triggers, this.hideTriggers, t), this.$_registerTriggerListeners([this.$_popperNode], No, this.popperTriggers, this.popperHideTriggers, t);
     },
     $_registerEventListeners(e, t, n) {
-      this.$_events.push({ targetNodes: e, eventType: t, handler: n }), e.forEach((i) => i.addEventListener(t, n, xn ? {
+      this.$_events.push({ targetNodes: e, eventType: t, handler: n }), e.forEach((i) => i.addEventListener(t, n, wn ? {
         passive: !0
       } : void 0));
     },
@@ -5885,8 +5885,8 @@ const ni = "__floating-vue__popper", Ir = () => Bt({
     },
     $_isAimingPopper() {
       const e = this.$_referenceNode.getBoundingClientRect();
-      if (mn >= e.left && mn <= e.right && hn >= e.top && hn <= e.bottom) {
-        const t = this.$_popperNode.getBoundingClientRect(), n = mn - yt, i = hn - _t, r = t.left + t.width / 2 - yt + (t.top + t.height / 2) - _t + t.width + t.height, s = yt + n * r, l = _t + i * r;
+      if (fn >= e.left && fn <= e.right && mn >= e.top && mn <= e.bottom) {
+        const t = this.$_popperNode.getBoundingClientRect(), n = fn - yt, i = mn - _t, r = t.left + t.width / 2 - yt + (t.top + t.height / 2) - _t + t.width + t.height, s = yt + n * r, l = _t + i * r;
         return In(yt, _t, s, l, t.left, t.top, t.left, t.bottom) || // Left edge
         In(yt, _t, s, l, t.left, t.top, t.right, t.top) || // Top edge
         In(yt, _t, s, l, t.right, t.top, t.right, t.bottom) || // Right edge
@@ -5901,7 +5901,7 @@ const ni = "__floating-vue__popper", Ir = () => Bt({
 });
 if (typeof document < "u" && typeof window < "u") {
   if (Or) {
-    const e = xn ? {
+    const e = wn ? {
       passive: !0,
       capture: !0
     } : !0;
@@ -5959,10 +5959,10 @@ function mc() {
   for (let e = 0; e < Ye.length; e++)
     Ye[e].$_computePosition();
 }
-let yt = 0, _t = 0, mn = 0, hn = 0;
+let yt = 0, _t = 0, fn = 0, mn = 0;
 typeof window < "u" && window.addEventListener("mousemove", (e) => {
-  yt = mn, _t = hn, mn = e.clientX, hn = e.clientY;
-}, xn ? {
+  yt = fn, _t = mn, fn = e.clientX, mn = e.clientY;
+}, wn ? {
   passive: !0
 } : void 0);
 function In(e, t, n, i, r, s, l, d) {
@@ -7308,7 +7308,7 @@ function Ed(e, t) {
     ge(e.$slots, "default")
   ]);
 }
-const Ie = /* @__PURE__ */ Qt(Td, [["render", Ed]]), Cd = { class: "rate-plan-list__wrapper" }, Pd = {
+const Ie = /* @__PURE__ */ kn(Td, [["render", Ed]]), Cd = { class: "rate-plan-list__wrapper" }, Pd = {
   __name: "BflexAccommodationOfferCard",
   props: {
     accommodationOffer: { type: Object, required: !0 },
@@ -7369,7 +7369,7 @@ function $d(e, t) {
     ge(e.$slots, "default")
   ]);
 }
-const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
+const Sn = /* @__PURE__ */ kn(Ad, [["render", $d]]), Od = {
   __name: "ChooseAccommodationPage",
   props: {
     dateRange: {
@@ -7425,7 +7425,7 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
           children: [],
           quantity: 1
         });
-        f("released", { action: un, cart: k.cart });
+        f("released", { action: cn, cart: k.cart });
       } catch (k) {
         l(k);
       } finally {
@@ -7591,7 +7591,7 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
                     onInput: u[1] || (u[1] = (_) => d(_))
                   }, null, 544), [
                     [
-                      cn,
+                      ln,
                       s.firstName,
                       void 0,
                       { trim: !0 }
@@ -7617,7 +7617,7 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
                     onInput: u[3] || (u[3] = (_) => d(_))
                   }, null, 544), [
                     [
-                      cn,
+                      ln,
                       s.lastName,
                       void 0,
                       { trim: !0 }
@@ -7642,7 +7642,7 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
                     onInput: u[5] || (u[5] = (_) => d(_))
                   }, null, 544), [
                     [
-                      cn,
+                      ln,
                       s.email,
                       void 0,
                       { trim: !0 }
@@ -7666,7 +7666,7 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
                     onInput: u[7] || (u[7] = (_) => d(_))
                   }, null, 544), [
                     [
-                      cn,
+                      ln,
                       s.phone,
                       void 0,
                       { trim: !0 }
@@ -8000,7 +8000,7 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
                   rows: "3",
                   maxlength: "500"
                 }, null, 512), [
-                  [cn, s.comment]
+                  [ln, s.comment]
                 ])
               ]),
               _: 1
@@ -8444,7 +8444,7 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
       n.value = p, t.captureToken && u();
     }), Tt(() => {
       t.captureToken && u();
-    }), kn(() => {
+    }), xn(() => {
       _();
     }), (p, h) => (C(), M("div", qf, [
       e.captureToken ? (C(), M("div", Bf, [
@@ -8489,7 +8489,7 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
       ]))
     ]));
   }
-}, Xf = /* @__PURE__ */ Qt(jf, [["__scopeId", "data-v-f06eaf72"]]), Gf = { class: "reservation-result" }, Kf = { class: "reservation-result__title" }, Jf = { class: "reservation-result__description" }, Zf = {
+}, Xf = { class: "reservation-result" }, Gf = { class: "reservation-result__title" }, Kf = { class: "reservation-result__description" }, Jf = {
   __name: "ResultPage",
   props: {
     sid: {
@@ -8522,9 +8522,9 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
     return qe(() => t.sid, f), Tt(f), (p, h) => (C(), ie(Sn, null, {
       default: B(() => [
         l.value ? (C(), ie(Tn, { key: 0 })) : (C(), M(de, { key: 1 }, [
-          w("section", Gf, [
-            w("div", Kf, D(z(n)("reservation.title")), 1),
-            w("div", Jf, D(z(n)(`reservation.description.${u.value}`)), 1)
+          w("section", Xf, [
+            w("div", Gf, D(z(n)("reservation.title")), 1),
+            w("div", Kf, D(z(n)(`reservation.description.${u.value}`)), 1)
           ]),
           N(qi, {
             mode: "info",
@@ -8548,7 +8548,7 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
                 ]),
                 _: 1
               }),
-              r.value.payment.captureToken ? (C(), ie(Xf, {
+              r.value.payment.captureToken ? (C(), ie(jf, {
                 key: 0,
                 "capture-token": r.value.payment.captureToken,
                 timeout: 30,
@@ -8589,7 +8589,7 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
       _: 1
     }));
   }
-}, Qf = { class: "reservation-result" }, em = { class: "reservation-result__title" }, tm = { class: "reservation-result__description" }, nm = { class: "accommodation-list__payment-rules" }, im = { style: { color: "orangered" } }, om = { style: { color: "orangered" } }, rm = { style: { display: "flex", "flex-direction": "row", "justify-content": "end", "column-gap": "0.5rem", padding: "1rem", "align-items": "center" } }, am = ["value"], sm = { class: "agreement-rules-list__rules" }, lm = {
+}, Zf = { class: "reservation-result" }, Qf = { class: "reservation-result__title" }, em = { class: "reservation-result__description" }, tm = { class: "accommodation-list__payment-rules" }, nm = { style: { color: "orangered" } }, im = { style: { color: "orangered" } }, om = { style: { display: "flex", "flex-direction": "row", "justify-content": "end", "column-gap": "0.5rem", padding: "1rem", "align-items": "center" } }, rm = ["value"], am = { class: "agreement-rules-list__rules" }, sm = {
   __name: "CancelReservationPage",
   props: {
     sid: {
@@ -8617,9 +8617,9 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
     return qe(() => t.sid, d), Tt(d), (h, x) => (C(), ie(Sn, null, {
       default: B(() => [
         s.value ? (C(), ie(Tn, { key: 0 })) : (C(), M(de, { key: 1 }, [
-          w("section", Qf, [
-            w("div", em, D(z(n)("cancellationProcess.title")), 1),
-            w("div", tm, D(z(n)("cancellationProcess.description")), 1)
+          w("section", Zf, [
+            w("div", Qf, D(z(n)("cancellationProcess.title")), 1),
+            w("div", em, D(z(n)("cancellationProcess.description")), 1)
           ]),
           N(qi, {
             mode: "cancellation",
@@ -8631,15 +8631,15 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
             default: B(() => [
               N(Ie, null, {
                 default: B(() => [
-                  w("dl", nm, [
-                    w("dt", im, D(z(n)("chosenAccommodation.penalty")) + ":", 1),
-                    w("dd", om, D(r.value.reservation.penalties.total.amount) + " " + D(r.value.reservation.penalties.total.currency), 1)
+                  w("dl", tm, [
+                    w("dt", nm, D(z(n)("chosenAccommodation.penalty")) + ":", 1),
+                    w("dd", im, D(r.value.reservation.penalties.total.amount) + " " + D(r.value.reservation.penalties.total.currency), 1)
                   ])
                 ]),
                 _: 1
               }),
               N(Pe),
-              w("div", rm, [
+              w("div", om, [
                 w("div", null, D(z(n)("cancellationProcess.codeHelp")), 1),
                 N(Dt, {
                   label: z(n)("cancellationProcess.codeLabel"),
@@ -8650,7 +8650,7 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
                       name: "cancellationCode",
                       value: u.value,
                       onInput: x[0] || (x[0] = Wo((k) => u.value = k.currentTarget.value, ["stop"]))
-                    }, null, 40, am)
+                    }, null, 40, rm)
                   ]),
                   _: 1
                 }, 8, ["label"]),
@@ -8678,7 +8678,7 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
               N(Pe),
               N(Ie, null, {
                 default: B(() => [
-                  w("ul", sm, [
+                  w("ul", am, [
                     (C(!0), M(de, null, Le(z(f)(
                       r.value.reservation.cancellationPolicy.consequences
                     ), (k, S) => (C(), M("li", { key: S }, D(k), 1))), 128))
@@ -8697,7 +8697,7 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
       _: 1
     }));
   }
-}, cm = { id: "bflex-booking-widget" }, um = { class: "booking-widget" }, Fr = {
+}, lm = { id: "bflex-booking-widget" }, cm = { class: "booking-widget" }, Fr = {
   __name: "BookingWidget",
   props: {
     start: {
@@ -8735,9 +8735,9 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
       }
     });
     Vo("settings", n);
-    const i = [un, Rn, xo], r = se(null), s = (k) => {
+    const i = [cn, Rn, xo], r = se(null), s = (k) => {
       if (!k)
-        r.value = un;
+        r.value = cn;
       else if (k === ei)
         r.value = ei;
       else {
@@ -8785,7 +8785,7 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
         const { widget: P } = S;
         P && P.locale && P.l10n && Object.keys(P.l10n).length && (qn.global.locale.value = P.locale, qn.global.setLocaleMessage(P.locale, P.l10n));
         const g = new URLSearchParams(window.location.search);
-        g.has("cancelReservation") ? (x.value = g.get("cancelReservation"), console.log("Cancel reservation", x.value), s(ei)) : k ? s(un) : s();
+        g.has("cancelReservation") ? (x.value = g.get("cancelReservation"), console.log("Cancel reservation", x.value), s(ei)) : k ? s(cn) : s();
       } catch (k) {
         _(k);
       } finally {
@@ -8793,14 +8793,14 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
           l.value = !1;
         }, 1e3);
       }
-    }), kn(() => {
+    }), xn(() => {
       window.removeEventListener("bflex:search-bar:search", p);
     });
     const h = ({ action: k, result: S }) => {
       k === _r ? s() : (k === Rn && (d.value = S.reservations[0]), s(k));
     }, x = se(null);
-    return (k, S) => (C(), M("main", cm, [
-      w("div", um, [
+    return (k, S) => (C(), M("main", lm, [
+      w("div", cm, [
         w("section", {
           ref_key: "container",
           ref: f,
@@ -8812,11 +8812,11 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
             ]),
             _: 1
           })) : fe("", !0),
-          x.value ? (C(), ie(lm, {
+          x.value ? (C(), ie(sm, {
             key: 1,
             sid: x.value,
             onCancelReservation: S[0] || (S[0] = (P) => x.value = null)
-          }, null, 8, ["sid"])) : r.value === z(un) ? (C(), ie(Od, {
+          }, null, 8, ["sid"])) : r.value === z(cn) ? (C(), ie(Od, {
             key: 2,
             dateRange: u.value,
             promoCode: e.promoCode,
@@ -8824,7 +8824,7 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
           }, null, 8, ["dateRange", "promoCode"])) : r.value === z(Rn) ? (C(), ie(Af, {
             key: 3,
             onReleased: h
-          })) : r.value === z(xo) ? (C(), ie(Zf, {
+          })) : r.value === z(xo) ? (C(), ie(Jf, {
             key: 4,
             sid: d.value,
             onReleased: h
@@ -8833,7 +8833,7 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
       ])
     ]));
   }
-}, dm = { style: { display: "flex", "flex-direction": "column", "min-height": "300px", "justify-content": "center", "align-items": "center" } }, qr = {
+}, um = { style: { display: "flex", "flex-direction": "column", "min-height": "300px", "justify-content": "center", "align-items": "center" } }, qr = {
   __name: "BflexErrorProvider",
   setup(e) {
     const { t } = Ce(), n = se(null);
@@ -8849,7 +8849,7 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
       default: B(() => [
         N(Ie, null, {
           default: B(() => [
-            w("section", dm, [
+            w("section", um, [
               w("h1", null, D(z(t)("globalError.title")), 1),
               w("p", null, D(z(t)("globalError.description")), 1),
               w("button", {
@@ -8864,7 +8864,7 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
       _: 1
     })) : ge(l.$slots, "default", { key: 0 });
   }
-}, fm = '@charset "UTF-8";.resize-observer[data-v-b329ee4c]{position:absolute;top:0;left:0;z-index:-1;width:100%;height:100%;border:none;background-color:transparent;pointer-events:none;display:block;overflow:hidden;opacity:0}.resize-observer[data-v-b329ee4c] object{display:block;position:absolute;top:0;left:0;height:100%;width:100%;overflow:hidden;pointer-events:none;z-index:-1}.v-popper__popper{z-index:10000;top:0;left:0;outline:none}.v-popper__popper.v-popper__popper--hidden{visibility:hidden;opacity:0;transition:opacity .15s,visibility .15s;pointer-events:none}.v-popper__popper.v-popper__popper--shown{visibility:visible;opacity:1;transition:opacity .15s}.v-popper__popper.v-popper__popper--skip-transition,.v-popper__popper.v-popper__popper--skip-transition>.v-popper__wrapper{transition:none!important}.v-popper__backdrop{position:absolute;top:0;left:0;width:100%;height:100%;display:none}.v-popper__inner{position:relative;box-sizing:border-box;overflow-y:auto}.v-popper__inner>div{position:relative;z-index:1;max-width:inherit;max-height:inherit}.v-popper__arrow-container{position:absolute;width:10px;height:10px}.v-popper__popper--arrow-overflow .v-popper__arrow-container,.v-popper__popper--no-positioning .v-popper__arrow-container{display:none}.v-popper__arrow-inner,.v-popper__arrow-outer{border-style:solid;position:absolute;top:0;left:0;width:0;height:0}.v-popper__arrow-inner{visibility:hidden;border-width:7px}.v-popper__arrow-outer{border-width:6px}.v-popper__popper[data-popper-placement^=top] .v-popper__arrow-inner,.v-popper__popper[data-popper-placement^=bottom] .v-popper__arrow-inner{left:-2px}.v-popper__popper[data-popper-placement^=top] .v-popper__arrow-outer,.v-popper__popper[data-popper-placement^=bottom] .v-popper__arrow-outer{left:-1px}.v-popper__popper[data-popper-placement^=top] .v-popper__arrow-inner,.v-popper__popper[data-popper-placement^=top] .v-popper__arrow-outer{border-bottom-width:0;border-left-color:transparent!important;border-right-color:transparent!important;border-bottom-color:transparent!important}.v-popper__popper[data-popper-placement^=top] .v-popper__arrow-inner{top:-2px}.v-popper__popper[data-popper-placement^=bottom] .v-popper__arrow-container{top:0}.v-popper__popper[data-popper-placement^=bottom] .v-popper__arrow-inner,.v-popper__popper[data-popper-placement^=bottom] .v-popper__arrow-outer{border-top-width:0;border-left-color:transparent!important;border-right-color:transparent!important;border-top-color:transparent!important}.v-popper__popper[data-popper-placement^=bottom] .v-popper__arrow-inner{top:-4px}.v-popper__popper[data-popper-placement^=bottom] .v-popper__arrow-outer{top:-6px}.v-popper__popper[data-popper-placement^=left] .v-popper__arrow-inner,.v-popper__popper[data-popper-placement^=right] .v-popper__arrow-inner{top:-2px}.v-popper__popper[data-popper-placement^=left] .v-popper__arrow-outer,.v-popper__popper[data-popper-placement^=right] .v-popper__arrow-outer{top:-1px}.v-popper__popper[data-popper-placement^=right] .v-popper__arrow-inner,.v-popper__popper[data-popper-placement^=right] .v-popper__arrow-outer{border-left-width:0;border-left-color:transparent!important;border-top-color:transparent!important;border-bottom-color:transparent!important}.v-popper__popper[data-popper-placement^=right] .v-popper__arrow-inner{left:-4px}.v-popper__popper[data-popper-placement^=right] .v-popper__arrow-outer{left:-6px}.v-popper__popper[data-popper-placement^=left] .v-popper__arrow-container{right:-10px}.v-popper__popper[data-popper-placement^=left] .v-popper__arrow-inner,.v-popper__popper[data-popper-placement^=left] .v-popper__arrow-outer{border-right-width:0;border-top-color:transparent!important;border-right-color:transparent!important;border-bottom-color:transparent!important}.v-popper__popper[data-popper-placement^=left] .v-popper__arrow-inner{left:-2px}.v-popper--theme-tooltip .v-popper__inner{background:#000c;color:#fff;border-radius:6px;padding:7px 12px 6px}.v-popper--theme-tooltip .v-popper__arrow-outer{border-color:#000c}.v-popper--theme-dropdown .v-popper__inner{background:#fff;color:#000;border-radius:6px;border:1px solid #ddd;box-shadow:0 6px 30px #0000001a}.v-popper--theme-dropdown .v-popper__arrow-inner{visibility:visible;border-color:#fff}.v-popper--theme-dropdown .v-popper__arrow-outer{border-color:#ddd}:host,.booking-widget{font-family:var(--font-base, "Roboto"),sans-serif;font-size:var(--base-font, 16px);color:#4a5568;line-height:1.5;box-sizing:border-box;display:flex;flex-direction:column;max-width:960px;margin:0 auto}*,*:before,*:after{box-sizing:border-box;margin:0;padding:0}.booking-widget__content{position:relative;min-height:450px}h1{font-size:1.5rem;font-weight:600;margin-bottom:1rem}h2{font-size:1.25rem;font-weight:600;margin-bottom:.75rem;color:var(--base-header-color, #1a202c)}h3{font-size:1.125rem;font-weight:600;margin-bottom:.75rem;color:var(--base-header-color, #1a202c)}h4{font-size:1rem;font-weight:600;margin-bottom:.5rem;color:var(--base-header-color, #1a202c)}h5{font-size:.875rem;font-weight:600;margin-bottom:.5rem;color:var(--base-header-color, #1a202c)}p{font-size:1rem;margin-bottom:.75rem;color:#4a5568}small,.text-sm{font-size:.875rem}.button{display:inline-flex;align-items:center;justify-content:center;font-size:.875rem;padding:.5rem 1rem;border-radius:.375rem;background:var(--base-button-bg, #ea580c);color:var(--base-button-color, #ffffff);border:none;cursor:pointer;text-decoration:none;text-wrap:nowrap;transition:background-color .2s}.button:hover{background:var(--base-button-bg-hover, #c2410c)}.button:disabled{background:#ccc;cursor:not-allowed}.section{padding:1.5rem}.card+.card{margin-top:1rem}blockquote,.blockquote{border-left:3px solid #696969;padding-left:1rem;margin-bottom:1rem;font-size:.875rem;color:#696969}.cursor-pointer{cursor:pointer}abbr,.abbreviation{display:inline;border-bottom-style:dotted;border-bottom-width:1px;cursor:pointer;white-space:pre-line}.inline{display:inline}strong{font-weight:700}a{color:#ea580c;cursor:pointer;text-decoration:underline}a:hover{text-decoration:none}ul{margin:0}ul li{display:block;margin-bottom:.5rem;list-style:disc}ul li:before{content:"";display:inline-flex;margin-right:.25rem}#bflex-booking-widget{position:relative;container-type:inline-size;container-name:widget}@container widget (max-width: 480px){.booking-widget{font-size:var(--base-font, 14px);line-height:1.4}}.details-info{display:flex;background-color:#f9f9fa;border-radius:5px;padding:1rem 1.25rem;font-size:.875rem;column-gap:.5rem}.details-info--icon{flex:0 0 1rem}.accommodation-list__item{margin-bottom:.5rem}.accommodation-list__item-delete{margin-bottom:.5rem;color:#a1a1a1}.accommodation-list__item-delete:hover{color:#1b1b1f}.accommodation-list__total{color:#000}.accommodation-list__payment-rules dd,.accommodation-list__payment-rules dt{margin-bottom:.25rem;font-size:.875rem}.accommodation-list__payment-rules .highlighted{color:var(--chosen-accommodation-payment-types, #ea580c)}.accommodation-list .payment-type{display:inline-flex;flex-direction:row;align-items:center;font-size:.875rem;border:1px solid var(--chosen-accommodation-payment-types, #ea580c);border-radius:5px;margin-top:1rem}.accommodation-list .payment-type__label{font-weight:700;background-color:var(--chosen-accommodation-payment-types, #ea580c);color:#fff;height:100%;padding:.5rem 1rem;flex-wrap:nowrap;text-wrap:nowrap}.accommodation-list .payment-type__variants{display:flex;flex-direction:row;align-items:start;justify-content:start;width:100%;padding:.5rem 1rem;box-sizing:border-box}.accommodation-list .payment-type label{display:flex;flex-direction:row;font-weight:400;margin-right:1rem;cursor:pointer}.accommodation-list .payment-type label input[type=radio]{margin:0 .25rem;padding:0}@container widget (max-width: 480px){.accommodation-list .payment-type{flex-direction:column;align-items:start;width:100%}.accommodation-list .payment-type__label{margin-right:0;width:100%}.accommodation-list .payment-type__variants{flex-direction:column;align-items:start;justify-content:start;width:100%}.accommodation-list .payment-type label{flex-direction:row;padding:.5rem .5rem .5rem 0}}.rate-plan-list{display:flex;flex-flow:column}.rate-plan-list .rate-plan-card:last-child{border-bottom-left-radius:var(--main-border-radius, 10px);border-bottom-right-radius:var(--main-border-radius, 10px)}@container widget (max-width: 480px){.accommodation-offer{overflow-x:hidden}.rate-plan-list__wrapper{padding:.5rem}.rate-plan-list{overflow-x:scroll;scroll-snap-type:x mandatory;flex-direction:row;column-gap:.5rem}}.agreement-rules-list__rules li{padding-left:.25rem}.agreement-rules-list__rules li:before{display:inline-block;content:"—";margin-right:.25rem}.agreement-rules-list__agreements-item{display:flex;flex-direction:row;margin-bottom:.5rem}.agreement-rules-list__combined-agreement{padding:0}.agreement-rules-list__combined-agreement:after{display:inline-block;padding-right:0;content:", ";text-decoration:none}.agreement-rules-list__combined-agreement:last-child:after{content:"";display:none}.accommodation-type-card{display:flex;color:var(--accommodation-type-card-color);border-top-left-radius:var(--main-border-radius, 10px);border-top-right-radius:var(--main-border-radius, 10px);background:var(--accommodation-type-card-background, transparent)}.accommodation-type-card__img{width:300px;flex-shrink:0;border-top-left-radius:var(--main-border-radius, 10px);overflow:hidden;background:#f0f0f0;cursor:pointer;display:flex;color:#718096}.accommodation-type-card__img img{width:100%;height:100%;object-fit:cover;object-position:center}.accommodation-type-card__img span{text-align:center;width:100%;display:flex;align-items:center;justify-content:center;min-height:180px}.accommodation-type-card__body{display:flex;flex-flow:column;justify-content:space-between;padding:1.5rem;width:100%}.amenities{font-size:.75rem;background:transparent;margin-top:.75rem;display:inline-flex;flex-wrap:wrap;gap:.5rem;font-weight:500}.amenities__item{border:none;padding:.375rem .5rem;line-height:1;background:var(--amenities-item-bg, #ebf8ff);color:var(--amenities-item-text-color, #2b6cb0);border-radius:var(--amenities-item-border-radius, 4px)}.amenities__item:nth-last-child(2){background:var(--amenities-item-secondary-bg, #faf5ff);color:var(--amenities-item-text-secondary-color, #553c9a)}.amenities__item:last-child{background:var(--amenities-item-tertiary-bg, #f0fff4);color:var(--amenities-item-text-tertiary-color, #22543d)}@container widget (max-width: 480px){.accommodation-type-card{flex-flow:column;max-height:initial;height:auto}.accommodation-type-card__img{width:auto;border-top-right-radius:var(--main-border-radius, 10px);line-height:1}.accommodation-type-card__img img{height:220px}.accommodation-type-card__body{width:auto}}.custom-checkbox{display:flex;align-items:center;cursor:pointer}.custom-checkbox input[type=checkbox]{position:absolute;opacity:0;width:1.25rem;height:1.25rem;cursor:pointer}.custom-checkbox__box{width:1rem;height:1rem;flex:0 0 1rem;border:2px solid rgba(34,34,34,.2);border-radius:3px;position:relative;margin-right:.5rem;transition:background-color .3s}.custom-checkbox input[type=checkbox]:checked+.custom-checkbox__box{background-color:#fff}.custom-checkbox__box:after{content:"";position:absolute;top:50%;left:50%;width:.5rem;height:.5rem;background-color:#ea580c;transform:translate(-50%,-50%) scale(0);transition:transform .3s}.custom-checkbox input[type=checkbox]:checked+.custom-checkbox__box:after{transform:translate(-50%,-50%) scale(1)}.customer-data-form{display:grid;grid-template-columns:1fr 1fr;row-gap:1rem;column-gap:1.5rem;padding:1rem 0 0}@container widget (max-width: 480px){.customer-data-form{grid-template-columns:1fr}}.field-decorator__required{padding-left:3px;color:red}.field-decorator__input-group{border:1px solid #e5e5e5;border-radius:5px;background-color:#fff;padding:.25rem .5rem;display:flex;flex-direction:column}.field-decorator__label{font-size:.875em;margin-bottom:.25em;line-height:1;color:#2226}.field-decorator__slot{display:flex;flex-direction:column;width:100%;height:auto}.field-decorator__slot textarea,.field-decorator__slot select,.field-decorator__slot input{border:0!important;outline:0!important;background:#fff;width:100%;height:100%;font-size:.875rem;padding:.25rem 0}.field-decorator__slot textarea{resize:vertical}.field-decorator__hint{height:1.25rem;color:#3d3d3d;text-align:right;font-size:.725rem;overflow:hidden}.form-group--error .field-decorator__input-group{border-color:red}.form-group--error .field-decorator__hint{color:red}.information-block-grid{display:grid;grid-row-gap:1.25rem}.information-block{background-color:var(--information-block-bg, #ffffff);border-radius:var(--main-border-radius, 10px);box-shadow:0 4px 12px #00000014}.information-block--attention{border:3px solid red}.information-block__content{padding:1rem 1.25rem}.information-block__content dl{display:grid;grid-template-columns:1fr 1fr;gap:.25rem;align-items:center}.information-block__content dl dt{font-weight:700;line-height:1}.information-block__content dl dd{text-align:right;line-height:1}.information-block__content a{padding:0 .25rem}.information-block .divider{margin:0;height:var(--information-block-divider-height, 1px);background-color:var(--information-block-divider-bg, #e5e5e5)}.information-block header{display:flex;flex-direction:row;justify-content:space-between;align-items:center;margin:0;padding:1rem 1.25rem;border-radius:10px 10px 0 0;font-size:1.25rem;font-weight:700}.information-block header .additional{color:gray;font-weight:400}.information-block header.dense{padding:.5rem 1.25rem}@container widget (max-width: 480px){.information-block header{flex-direction:column;align-items:flex-start}}.cycle-loader{display:flex}@-webkit-keyframes v-pulseStretchDelay{0%,80%{-webkit-transform:scale(1);transform:scale(1);-webkit-opacity:1;opacity:1}45%{-webkit-transform:scale(.1);transform:scale(.1);-webkit-opacity:.7;opacity:.7}}@keyframes v-pulseStretchDelay{0%,80%{-webkit-transform:scale(1);transform:scale(1);-webkit-opacity:1;opacity:1}45%{-webkit-transform:scale(.1);transform:scale(.1);-webkit-opacity:.7;opacity:.7}}.price-block{display:grid;grid-template-columns:1fr;grid-template-areas:"discount" "amount";line-height:1;height:100%;width:100%}.price-block__discount{grid-area:discount;line-height:1;display:flex;align-items:center;justify-self:end;font-size:.75rem;font-weight:lighter;color:var(--price-block-discount-old-value, #4a5568)}.price-block__discount-size{display:block;padding:.125rem;margin-right:.25rem;background:var(--price-block-discount-bg, #dc2626);color:var(--price-block-discount-color, white);border-radius:.25rem}.price-block__old{text-decoration-line:line-through;opacity:.5}.price-block__schedule{font-size:.75rem}.price-block__icons .icon{font-size:1rem;fill:var(--price-block-person-icon-color)}.price-block__amount{grid-area:amount;display:flex;flex-direction:row;align-items:center;justify-content:space-between;line-height:1;font-size:1.25rem}.price-block__current{margin-left:.5rem}.price-block__current-currency{font-weight:lighter;padding:0 .125rem}@container widget (max-width: 480px){.price-block{grid-template-columns:1fr;grid-template-areas:"amount discount";column-gap:1rem}}.rate-plan-card{display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"description actions" "bottom actions";width:100%;position:relative;background-color:var(--rate-plan-background);font-size:var(--rate-plan-font-size);color:var(--rate-plan-color)}.rate-plan-card--blocked{display:flex;justify-content:center;height:100%;width:100%;position:absolute;background:#0000001a;z-index:1}.rate-plan-card__title{display:inline-flex;align-items:center}.rate-plan-card__wrapper{grid-area:description;padding:0}.rate-plan-card blockquote{border-left-color:var(--rate-plan-secondary-color);color:var(--rate-plan-secondary-color)}.rate-plan-card__description{padding:1.5rem}.rate-plan-card__offers{font-size:var(--rate-plan-font-size, .875rem);color:var(--rate-plan-secondary-color)}.rate-plan-card__offers-item{display:flex;align-items:center;padding:.375rem 0}.rate-plan-card__offers-item .icon{margin-right:.375rem;color:var(--rate-plan-icon-color);fill:var(--rate-plan-icon-color, #696969)}.rate-plan-card__offers-item.extra-offer .icon{color:inherit}.rate-plan-card__offers-item.feed-offer{color:var(--rate-plan-feed-text-color, #059669)}.rate-plan-card__offers-item.feed-offer .icon{color:var(--rate-plan-feed-icon-color, #059669);fill:var(--rate-plan-feed-icon-color, #059669)}.rate-plan-card__offers-item.cancellation-policy-offer{color:var(--rate-plan-cancellation-policy-text-color)}.rate-plan-card__offers-item.cancellation-policy-offer .icon{color:var(--rate-plan-cancellation-policy-icon-color, #696969);fill:var(--rate-plan-cancellation-policy-icon-color, #696969)}.rate-plan-card__offers-item.payment-type-offers{color:var(--rate-plan-payment-type-text-color)}.rate-plan-card__offers-item.payment-type-offers .icon{color:var(--rate-plan-payment-type-icon-color, #696969);fill:var(--rate-plan-payment-type-icon-color, #696969)}.rate-plan-card__variants{display:flex;flex-direction:column;align-items:end;padding:1rem 0}.rate-plan-card__variants .length-of-stay{display:block;font-size:.875rem;text-align:right;padding:0 1rem;color:var(--rate-plan-los-color)}@container widget (max-width: 480px){.rate-plan-list--single .rate-plan-card{width:100%;flex:0 0 100%}.rate-plan-card{display:flex;flex:0 0 90%;flex-direction:column;min-width:90%;scroll-snap-align:start;justify-content:space-between;background-color:var(--rate-plan-mobile-background);border-radius:var(--rate-plan-mobile-border-radius, 10px);border:var(--rate-plan-mobile-border, 1px dashed #e5e5e5)}.rate-plan-card__actions{justify-self:stretch}.rate-plan-card__offers{color:var(--rate-plan-mobile-secondary-color)}.rate-plan-card__offers-item .icon{color:var(--rate-plan-mobile-icon-color, #696969);fill:var(--rate-plan-mobile-icon-color, #696969)}.rate-plan-card__offers-item.feed-offer{color:var(--rate-plan-mobile-feed-text-color, #059669)}.rate-plan-card__offers-item.feed-offer .icon{color:var(--rate-plan-mobile-feed-icon-color, #059669);fill:var(--rate-plan-mobile-feed-icon-color, #059669)}.rate-plan-card__offers-item.cancellation-policy-offer{color:var(--rate-plan-mobile-cancellation-policy-text-color)}.rate-plan-card__offers-item.cancellation-policy-offer .icon{color:var(--rate-plan-mobile-cancellation-policy-icon-color, #696969);fill:var(--rate-plan-mobile-cancellation-policy-icon-color, #696969)}.rate-plan-card__offers-item.payment-type-offers{color:var(--rate-plan-mobile-payment-type-text-color)}.rate-plan-card__offers-item.payment-type-offers .icon{color:var(--rate-plan-mobile-payment-type-icon-color, #696969);fill:var(--rate-plan-mobile-payment-type-icon-color, #696969)}}.variant-line{text-align:right;font-size:var(--variant-line-font-size);color:var(--variant-line-color, #000000)}.variant-line:hover,.variant-line.selected{background:var(--variant-line-selected, #e0e0e0)}.variant-line.selected:hover{background:var(--variant-line-hover, #d7d7d7)}.variant-line__content{display:flex;flex-direction:row;justify-content:flex-end;align-items:center;padding:.5rem 1rem}.variant-line__actions{margin-left:1rem}.variant-line__actions .book-button{background:var(--variant-line-button-bg, #ea580c);color:var(--variant-line-button-color, #ffffff)}.variant-line__actions .book-button:hover{background:var(--variant-line-button-bg-hover, #c2410c)}@container widget (max-width: 480px){.rate-plan-card__variants .variant-line:nth-of-type(odd){background:#f5f5f5}.variant-line{width:100%}.variant-line__content{flex-direction:column;row-gap:.5rem;width:100%;padding:1rem}.variant-line__actions{align-self:end;width:100%}.variant-line__actions button{width:100%}}.reservation-result{display:flex;flex-direction:column;margin-top:2rem;margin-bottom:1rem}.reservation-result__title{font-size:1.5rem;font-weight:700;text-align:center}.reservation-result__description{font-size:1.2rem;text-align:center}.hotel-information{display:flex;flex-direction:column;row-gap:.25rem;font-size:.875rem;justify-content:center;justify-items:center}@keyframes pulse{0%,to{opacity:1}50%{opacity:.5}}.accommodation-skeleton.accommodation-result .header .thumbnail,.accommodation-skeleton.accommodation-result .header .content .description,.accommodation-skeleton.accommodation-result .header .content .amenities{display:none}.accommodation-skeleton.accommodation-result .header .content .title-skeleton{width:220px;margin-bottom:0}.accommodation-skeleton .header{display:flex;flex-direction:column}@media (min-width: 768px){.accommodation-skeleton .header{flex-direction:row}}.accommodation-skeleton .header .thumbnail{width:100%;height:192px;border-top-left-radius:10px;animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite;background-color:#e0e0e0}@media (min-width: 768px){.accommodation-skeleton .header .thumbnail{width:300px}}.accommodation-skeleton .header .content{flex:1;padding:16px}.accommodation-skeleton .header .content .title-skeleton{height:32px;width:96px;margin-bottom:16px;animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite;background-color:#e0e0e0;border-radius:4px}.accommodation-skeleton .header .content .description{margin-bottom:16px;display:flex;flex-direction:column;gap:8px}.accommodation-skeleton .header .content .description .line{height:16px;width:100%;animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite;background-color:#e0e0e0;border-radius:4px}.accommodation-skeleton .header .content .description .line.line-short{width:75%}.accommodation-skeleton .header .content .amenities{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.accommodation-skeleton .header .content .amenities .amenity-item{height:32px;width:80px;animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite;background-color:#e0e0e0;border-radius:4px}.accommodation-skeleton .footer .option-header{padding:16px;display:flex;justify-content:space-between;align-items:center}.accommodation-skeleton .footer .option-header .option-title{height:24px;width:80px;animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite;background-color:#e0e0e0;border-radius:4px}.accommodation-skeleton .footer .option-header .option-value{height:24px;width:64px;animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite;background-color:#e0e0e0;border-radius:4px}.accommodation-skeleton .footer .room-option{padding:16px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start}@media (min-width: 768px){.accommodation-skeleton .footer .room-option{flex-direction:row;align-items:center}}.accommodation-skeleton .footer .room-option .option-details{display:flex;flex-direction:column;gap:8px;width:100%}@media (min-width: 768px){.accommodation-skeleton .footer .room-option .option-details{width:50%}}.accommodation-skeleton .footer .room-option .option-details .option-name{height:20px;width:192px;animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite;background-color:#e0e0e0;border-radius:4px}.accommodation-skeleton .footer .room-option .option-details .option-description{height:16px;width:128px;animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite;background-color:#e0e0e0;border-radius:4px}.accommodation-skeleton .footer .room-option .price-section{display:flex;align-items:center;margin-top:8px}@media (min-width: 768px){.accommodation-skeleton .footer .room-option .price-section{margin-top:0}}.accommodation-skeleton .footer .room-option .price-section .price{height:24px;width:64px;margin-right:16px;animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite;background-color:#e0e0e0;border-radius:4px}.accommodation-skeleton .footer .room-option .price-section .book-button{height:40px;width:96px;animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite;background-color:#e0e0e0;border-radius:4px}.icons{display:flex;align-items:end;color:#323232;fill:#323232}.scenario-text{font-size:var(--base-font);font-weight:lighter}.summary-block{position:sticky;width:auto;bottom:0;right:0;padding:1rem;box-shadow:0 -4px 54px #9e9e9e33;background:#fff;z-index:4;border-radius:10px}.summary-block__content{display:flex;justify-content:space-between;align-items:center}.summary-block__content-info{display:flex;flex-direction:column;align-items:flex-start}.summary-block__content-info__price{font-size:1rem;font-weight:700;color:#ea580c}.summary-block__content-info__text{display:flex;align-items:center;font-size:.875rem;color:#2229;vertical-align:center}.summary-block__content-info__text .icon{font-size:1rem;margin-left:.25rem}.summary-block .accommodation-summary-trigger{cursor:pointer}.summary-block .accommodation-summary-trigger:hover{color:#ea580c}@container widget (max-width: 480px){.summary-block{position:sticky;box-sizing:border-box;left:0;width:100%}}.v-popper__popper p{line-height:1;padding:.125rem 0;margin:.5rem;font-size:.875rem;color:#fff}.icon{fill:currentColor}.icon--small{width:16px}.icon-text{display:inline-flex;flex-direction:row;align-items:center;column-gap:.375rem}.icon-text__icon{display:inline-flex;color:#ea580c;flex:0 0 1rem}.icon-text__icon .icon{width:1.5rem}.icon-text__text{line-height:1}', mm = {
+}, dm = '@charset "UTF-8";.resize-observer[data-v-b329ee4c]{position:absolute;top:0;left:0;z-index:-1;width:100%;height:100%;border:none;background-color:transparent;pointer-events:none;display:block;overflow:hidden;opacity:0}.resize-observer[data-v-b329ee4c] object{display:block;position:absolute;top:0;left:0;height:100%;width:100%;overflow:hidden;pointer-events:none;z-index:-1}.v-popper__popper{z-index:10000;top:0;left:0;outline:none}.v-popper__popper.v-popper__popper--hidden{visibility:hidden;opacity:0;transition:opacity .15s,visibility .15s;pointer-events:none}.v-popper__popper.v-popper__popper--shown{visibility:visible;opacity:1;transition:opacity .15s}.v-popper__popper.v-popper__popper--skip-transition,.v-popper__popper.v-popper__popper--skip-transition>.v-popper__wrapper{transition:none!important}.v-popper__backdrop{position:absolute;top:0;left:0;width:100%;height:100%;display:none}.v-popper__inner{position:relative;box-sizing:border-box;overflow-y:auto}.v-popper__inner>div{position:relative;z-index:1;max-width:inherit;max-height:inherit}.v-popper__arrow-container{position:absolute;width:10px;height:10px}.v-popper__popper--arrow-overflow .v-popper__arrow-container,.v-popper__popper--no-positioning .v-popper__arrow-container{display:none}.v-popper__arrow-inner,.v-popper__arrow-outer{border-style:solid;position:absolute;top:0;left:0;width:0;height:0}.v-popper__arrow-inner{visibility:hidden;border-width:7px}.v-popper__arrow-outer{border-width:6px}.v-popper__popper[data-popper-placement^=top] .v-popper__arrow-inner,.v-popper__popper[data-popper-placement^=bottom] .v-popper__arrow-inner{left:-2px}.v-popper__popper[data-popper-placement^=top] .v-popper__arrow-outer,.v-popper__popper[data-popper-placement^=bottom] .v-popper__arrow-outer{left:-1px}.v-popper__popper[data-popper-placement^=top] .v-popper__arrow-inner,.v-popper__popper[data-popper-placement^=top] .v-popper__arrow-outer{border-bottom-width:0;border-left-color:transparent!important;border-right-color:transparent!important;border-bottom-color:transparent!important}.v-popper__popper[data-popper-placement^=top] .v-popper__arrow-inner{top:-2px}.v-popper__popper[data-popper-placement^=bottom] .v-popper__arrow-container{top:0}.v-popper__popper[data-popper-placement^=bottom] .v-popper__arrow-inner,.v-popper__popper[data-popper-placement^=bottom] .v-popper__arrow-outer{border-top-width:0;border-left-color:transparent!important;border-right-color:transparent!important;border-top-color:transparent!important}.v-popper__popper[data-popper-placement^=bottom] .v-popper__arrow-inner{top:-4px}.v-popper__popper[data-popper-placement^=bottom] .v-popper__arrow-outer{top:-6px}.v-popper__popper[data-popper-placement^=left] .v-popper__arrow-inner,.v-popper__popper[data-popper-placement^=right] .v-popper__arrow-inner{top:-2px}.v-popper__popper[data-popper-placement^=left] .v-popper__arrow-outer,.v-popper__popper[data-popper-placement^=right] .v-popper__arrow-outer{top:-1px}.v-popper__popper[data-popper-placement^=right] .v-popper__arrow-inner,.v-popper__popper[data-popper-placement^=right] .v-popper__arrow-outer{border-left-width:0;border-left-color:transparent!important;border-top-color:transparent!important;border-bottom-color:transparent!important}.v-popper__popper[data-popper-placement^=right] .v-popper__arrow-inner{left:-4px}.v-popper__popper[data-popper-placement^=right] .v-popper__arrow-outer{left:-6px}.v-popper__popper[data-popper-placement^=left] .v-popper__arrow-container{right:-10px}.v-popper__popper[data-popper-placement^=left] .v-popper__arrow-inner,.v-popper__popper[data-popper-placement^=left] .v-popper__arrow-outer{border-right-width:0;border-top-color:transparent!important;border-right-color:transparent!important;border-bottom-color:transparent!important}.v-popper__popper[data-popper-placement^=left] .v-popper__arrow-inner{left:-2px}.v-popper--theme-tooltip .v-popper__inner{background:#000c;color:#fff;border-radius:6px;padding:7px 12px 6px}.v-popper--theme-tooltip .v-popper__arrow-outer{border-color:#000c}.v-popper--theme-dropdown .v-popper__inner{background:#fff;color:#000;border-radius:6px;border:1px solid #ddd;box-shadow:0 6px 30px #0000001a}.v-popper--theme-dropdown .v-popper__arrow-inner{visibility:visible;border-color:#fff}.v-popper--theme-dropdown .v-popper__arrow-outer{border-color:#ddd}:host,.booking-widget{font-family:var(--font-base, "Roboto"),sans-serif;font-size:var(--base-font, 16px);color:#4a5568;line-height:1.5;box-sizing:border-box;display:flex;flex-direction:column;max-width:960px;margin:0 auto}*,*:before,*:after{box-sizing:border-box;margin:0;padding:0}.booking-widget__content{position:relative;min-height:450px}h1{font-size:1.5rem;font-weight:600;margin-bottom:1rem}h2{font-size:1.25rem;font-weight:600;margin-bottom:.75rem;color:var(--base-header-color, #1a202c)}h3{font-size:1.125rem;font-weight:600;margin-bottom:.75rem;color:var(--base-header-color, #1a202c)}h4{font-size:1rem;font-weight:600;margin-bottom:.5rem;color:var(--base-header-color, #1a202c)}h5{font-size:.875rem;font-weight:600;margin-bottom:.5rem;color:var(--base-header-color, #1a202c)}p{font-size:1rem;margin-bottom:.75rem;color:#4a5568}small,.text-sm{font-size:.875rem}.button{display:inline-flex;align-items:center;justify-content:center;font-size:.875rem;padding:.5rem 1rem;border-radius:.375rem;background:var(--base-button-bg, #ea580c);color:var(--base-button-color, #ffffff);border:none;cursor:pointer;text-decoration:none;text-wrap:nowrap;transition:background-color .2s}.button:hover{background:var(--base-button-bg-hover, #c2410c)}.button:disabled{background:#ccc;cursor:not-allowed}.section{padding:1.5rem}.card+.card{margin-top:1rem}blockquote,.blockquote{border-left:3px solid #696969;padding-left:1rem;margin-bottom:1rem;font-size:.875rem;color:#696969}.cursor-pointer{cursor:pointer}abbr,.abbreviation{display:inline;border-bottom-style:dotted;border-bottom-width:1px;cursor:pointer;white-space:pre-line}.inline{display:inline}strong{font-weight:700}a{color:#ea580c;cursor:pointer;text-decoration:underline}a:hover{text-decoration:none}ul{margin:0}ul li{display:block;margin-bottom:.5rem;list-style:disc}ul li:before{content:"";display:inline-flex;margin-right:.25rem}#bflex-booking-widget{position:relative;container-type:inline-size;container-name:widget}@container widget (max-width: 480px){.booking-widget{font-size:var(--base-font, 14px);line-height:1.4}}.details-info{display:flex;background-color:#f9f9fa;border-radius:5px;padding:1rem 1.25rem;font-size:.875rem;column-gap:.5rem}.details-info--icon{flex:0 0 1rem}.accommodation-list__item{margin-bottom:.5rem}.accommodation-list__item-delete{margin-bottom:.5rem;color:#a1a1a1}.accommodation-list__item-delete:hover{color:#1b1b1f}.accommodation-list__total{color:#000}.accommodation-list__payment-rules dd,.accommodation-list__payment-rules dt{margin-bottom:.25rem;font-size:.875rem}.accommodation-list__payment-rules .highlighted{color:var(--chosen-accommodation-payment-types, #ea580c)}.accommodation-list .payment-type{display:inline-flex;flex-direction:row;align-items:center;font-size:.875rem;border:1px solid var(--chosen-accommodation-payment-types, #ea580c);border-radius:5px;margin-top:1rem}.accommodation-list .payment-type__label{font-weight:700;background-color:var(--chosen-accommodation-payment-types, #ea580c);color:#fff;height:100%;padding:.5rem 1rem;flex-wrap:nowrap;text-wrap:nowrap}.accommodation-list .payment-type__variants{display:flex;flex-direction:row;align-items:start;justify-content:start;width:100%;padding:.5rem 1rem;box-sizing:border-box}.accommodation-list .payment-type label{display:flex;flex-direction:row;font-weight:400;margin-right:1rem;cursor:pointer}.accommodation-list .payment-type label input[type=radio]{margin:0 .25rem;padding:0}@container widget (max-width: 480px){.accommodation-list .payment-type{flex-direction:column;align-items:start;width:100%}.accommodation-list .payment-type__label{margin-right:0;width:100%}.accommodation-list .payment-type__variants{flex-direction:column;align-items:start;justify-content:start;width:100%}.accommodation-list .payment-type label{flex-direction:row;padding:.5rem .5rem .5rem 0}}.rate-plan-list{display:flex;flex-flow:column}.rate-plan-list .rate-plan-card:last-child{border-bottom-left-radius:var(--main-border-radius, 10px);border-bottom-right-radius:var(--main-border-radius, 10px)}@container widget (max-width: 480px){.accommodation-offer{overflow-x:hidden}.rate-plan-list__wrapper{padding:.5rem}.rate-plan-list{overflow-x:scroll;scroll-snap-type:x mandatory;flex-direction:row;column-gap:.5rem}}.agreement-rules-list__rules li{padding-left:.25rem}.agreement-rules-list__rules li:before{display:inline-block;content:"—";margin-right:.25rem}.agreement-rules-list__agreements-item{display:flex;flex-direction:row;margin-bottom:.5rem}.agreement-rules-list__combined-agreement{padding:0}.agreement-rules-list__combined-agreement:after{display:inline-block;padding-right:0;content:", ";text-decoration:none}.agreement-rules-list__combined-agreement:last-child:after{content:"";display:none}.accommodation-type-card{display:flex;color:var(--accommodation-type-card-color);border-top-left-radius:var(--main-border-radius, 10px);border-top-right-radius:var(--main-border-radius, 10px);background:var(--accommodation-type-card-background, transparent)}.accommodation-type-card__img{width:300px;flex-shrink:0;border-top-left-radius:var(--main-border-radius, 10px);overflow:hidden;background:#f0f0f0;cursor:pointer;display:flex;color:#718096}.accommodation-type-card__img img{width:100%;height:100%;object-fit:cover;object-position:center}.accommodation-type-card__img span{text-align:center;width:100%;display:flex;align-items:center;justify-content:center;min-height:180px}.accommodation-type-card__body{display:flex;flex-flow:column;justify-content:space-between;padding:1.5rem;width:100%}.amenities{font-size:.75rem;background:transparent;margin-top:.75rem;display:inline-flex;flex-wrap:wrap;gap:.5rem;font-weight:500}.amenities__item{border:none;padding:.375rem .5rem;line-height:1;background:var(--amenities-item-bg, #ebf8ff);color:var(--amenities-item-text-color, #2b6cb0);border-radius:var(--amenities-item-border-radius, 4px)}.amenities__item:nth-last-child(2){background:var(--amenities-item-secondary-bg, #faf5ff);color:var(--amenities-item-text-secondary-color, #553c9a)}.amenities__item:last-child{background:var(--amenities-item-tertiary-bg, #f0fff4);color:var(--amenities-item-text-tertiary-color, #22543d)}@container widget (max-width: 480px){.accommodation-type-card{flex-flow:column;max-height:initial;height:auto}.accommodation-type-card__img{width:auto;border-top-right-radius:var(--main-border-radius, 10px);line-height:1}.accommodation-type-card__img img{height:220px}.accommodation-type-card__body{width:auto}}.custom-checkbox{display:flex;align-items:center;cursor:pointer}.custom-checkbox input[type=checkbox]{position:absolute;opacity:0;width:1.25rem;height:1.25rem;cursor:pointer}.custom-checkbox__box{width:1rem;height:1rem;flex:0 0 1rem;border:2px solid rgba(34,34,34,.2);border-radius:3px;position:relative;margin-right:.5rem;transition:background-color .3s}.custom-checkbox input[type=checkbox]:checked+.custom-checkbox__box{background-color:#fff}.custom-checkbox__box:after{content:"";position:absolute;top:50%;left:50%;width:.5rem;height:.5rem;background-color:#ea580c;transform:translate(-50%,-50%) scale(0);transition:transform .3s}.custom-checkbox input[type=checkbox]:checked+.custom-checkbox__box:after{transform:translate(-50%,-50%) scale(1)}.customer-data-form{display:grid;grid-template-columns:1fr 1fr;row-gap:1rem;column-gap:1.5rem;padding:1rem 0 0}@container widget (max-width: 480px){.customer-data-form{grid-template-columns:1fr}}.field-decorator__required{padding-left:3px;color:red}.field-decorator__input-group{border:1px solid #e5e5e5;border-radius:5px;background-color:#fff;padding:.25rem .5rem;display:flex;flex-direction:column}.field-decorator__label{font-size:.875em;margin-bottom:.25em;line-height:1;color:#2226}.field-decorator__slot{display:flex;flex-direction:column;width:100%;height:auto}.field-decorator__slot textarea,.field-decorator__slot select,.field-decorator__slot input{border:0!important;outline:0!important;background:#fff;width:100%;height:100%;font-size:.875rem;padding:.25rem 0}.field-decorator__slot textarea{resize:vertical}.field-decorator__hint{height:1.25rem;color:#3d3d3d;text-align:right;font-size:.725rem;overflow:hidden}.form-group--error .field-decorator__input-group{border-color:red}.form-group--error .field-decorator__hint{color:red}.information-block-grid{display:grid;grid-row-gap:1.25rem}.information-block{background-color:var(--information-block-bg, #ffffff);border-radius:var(--main-border-radius, 10px);box-shadow:0 4px 12px #00000014}.information-block--attention{border:3px solid red}.information-block__content{padding:1rem 1.25rem}.information-block__content dl{display:grid;grid-template-columns:1fr 1fr;gap:.25rem;align-items:center}.information-block__content dl dt{font-weight:700;line-height:1}.information-block__content dl dd{text-align:right;line-height:1}.information-block__content a{padding:0 .25rem}.information-block .divider{margin:0;height:var(--information-block-divider-height, 1px);background-color:var(--information-block-divider-bg, #e5e5e5)}.information-block header{display:flex;flex-direction:row;justify-content:space-between;align-items:center;margin:0;padding:1rem 1.25rem;border-radius:10px 10px 0 0;font-size:1.25rem;font-weight:700}.information-block header .additional{color:gray;font-weight:400}.information-block header.dense{padding:.5rem 1.25rem}@container widget (max-width: 480px){.information-block header{flex-direction:column;align-items:flex-start}}.cycle-loader{display:flex}@-webkit-keyframes v-pulseStretchDelay{0%,80%{-webkit-transform:scale(1);transform:scale(1);-webkit-opacity:1;opacity:1}45%{-webkit-transform:scale(.1);transform:scale(.1);-webkit-opacity:.7;opacity:.7}}@keyframes v-pulseStretchDelay{0%,80%{-webkit-transform:scale(1);transform:scale(1);-webkit-opacity:1;opacity:1}45%{-webkit-transform:scale(.1);transform:scale(.1);-webkit-opacity:.7;opacity:.7}}.price-block{display:grid;grid-template-columns:1fr;grid-template-areas:"discount" "amount";line-height:1;height:100%;width:100%}.price-block__discount{grid-area:discount;line-height:1;display:flex;align-items:center;justify-self:end;font-size:.75rem;font-weight:lighter;color:var(--price-block-discount-old-value, #4a5568)}.price-block__discount-size{display:block;padding:.125rem;margin-right:.25rem;background:var(--price-block-discount-bg, #dc2626);color:var(--price-block-discount-color, white);border-radius:.25rem}.price-block__old{text-decoration-line:line-through;opacity:.5}.price-block__schedule{font-size:.75rem}.price-block__icons .icon{font-size:1rem;fill:var(--price-block-person-icon-color)}.price-block__amount{grid-area:amount;display:flex;flex-direction:row;align-items:center;justify-content:space-between;line-height:1;font-size:1.25rem}.price-block__current{margin-left:.5rem}.price-block__current-currency{font-weight:lighter;padding:0 .125rem}@container widget (max-width: 480px){.price-block{grid-template-columns:1fr;grid-template-areas:"amount discount";column-gap:1rem}}.rate-plan-card{display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"description actions" "bottom actions";width:100%;position:relative;background-color:var(--rate-plan-background);font-size:var(--rate-plan-font-size);color:var(--rate-plan-color)}.rate-plan-card--blocked{display:flex;justify-content:center;height:100%;width:100%;position:absolute;background:#0000001a;z-index:1}.rate-plan-card__title{display:inline-flex;align-items:center}.rate-plan-card__wrapper{grid-area:description;padding:0}.rate-plan-card blockquote{border-left-color:var(--rate-plan-secondary-color);color:var(--rate-plan-secondary-color)}.rate-plan-card__description{padding:1.5rem}.rate-plan-card__offers{font-size:var(--rate-plan-font-size, .875rem);color:var(--rate-plan-secondary-color)}.rate-plan-card__offers-item{display:flex;align-items:center;padding:.375rem 0}.rate-plan-card__offers-item .icon{margin-right:.375rem;color:var(--rate-plan-icon-color);fill:var(--rate-plan-icon-color, #696969)}.rate-plan-card__offers-item.extra-offer .icon{color:inherit}.rate-plan-card__offers-item.feed-offer{color:var(--rate-plan-feed-text-color, #059669)}.rate-plan-card__offers-item.feed-offer .icon{color:var(--rate-plan-feed-icon-color, #059669);fill:var(--rate-plan-feed-icon-color, #059669)}.rate-plan-card__offers-item.cancellation-policy-offer{color:var(--rate-plan-cancellation-policy-text-color)}.rate-plan-card__offers-item.cancellation-policy-offer .icon{color:var(--rate-plan-cancellation-policy-icon-color, #696969);fill:var(--rate-plan-cancellation-policy-icon-color, #696969)}.rate-plan-card__offers-item.payment-type-offers{color:var(--rate-plan-payment-type-text-color)}.rate-plan-card__offers-item.payment-type-offers .icon{color:var(--rate-plan-payment-type-icon-color, #696969);fill:var(--rate-plan-payment-type-icon-color, #696969)}.rate-plan-card__variants{display:flex;flex-direction:column;align-items:end;padding:1rem 0}.rate-plan-card__variants .length-of-stay{display:block;font-size:.875rem;text-align:right;padding:0 1rem;color:var(--rate-plan-los-color)}@container widget (max-width: 480px){.rate-plan-list--single .rate-plan-card{width:100%;flex:0 0 100%}.rate-plan-card{display:flex;flex:0 0 90%;flex-direction:column;min-width:90%;scroll-snap-align:start;justify-content:space-between;background-color:var(--rate-plan-mobile-background);border-radius:var(--rate-plan-mobile-border-radius, 10px);border:var(--rate-plan-mobile-border, 1px dashed #e5e5e5)}.rate-plan-card__actions{justify-self:stretch}.rate-plan-card__offers{color:var(--rate-plan-mobile-secondary-color)}.rate-plan-card__offers-item .icon{color:var(--rate-plan-mobile-icon-color, #696969);fill:var(--rate-plan-mobile-icon-color, #696969)}.rate-plan-card__offers-item.feed-offer{color:var(--rate-plan-mobile-feed-text-color, #059669)}.rate-plan-card__offers-item.feed-offer .icon{color:var(--rate-plan-mobile-feed-icon-color, #059669);fill:var(--rate-plan-mobile-feed-icon-color, #059669)}.rate-plan-card__offers-item.cancellation-policy-offer{color:var(--rate-plan-mobile-cancellation-policy-text-color)}.rate-plan-card__offers-item.cancellation-policy-offer .icon{color:var(--rate-plan-mobile-cancellation-policy-icon-color, #696969);fill:var(--rate-plan-mobile-cancellation-policy-icon-color, #696969)}.rate-plan-card__offers-item.payment-type-offers{color:var(--rate-plan-mobile-payment-type-text-color)}.rate-plan-card__offers-item.payment-type-offers .icon{color:var(--rate-plan-mobile-payment-type-icon-color, #696969);fill:var(--rate-plan-mobile-payment-type-icon-color, #696969)}}.variant-line{text-align:right;font-size:var(--variant-line-font-size);color:var(--variant-line-color, #000000)}.variant-line:hover,.variant-line.selected{background:var(--variant-line-selected, #e0e0e0)}.variant-line.selected:hover{background:var(--variant-line-hover, #d7d7d7)}.variant-line__content{display:flex;flex-direction:row;justify-content:flex-end;align-items:center;padding:.5rem 1rem}.variant-line__actions{margin-left:1rem}.variant-line__actions .book-button{background:var(--variant-line-button-bg, #ea580c);color:var(--variant-line-button-color, #ffffff)}.variant-line__actions .book-button:hover{background:var(--variant-line-button-bg-hover, #c2410c)}@container widget (max-width: 480px){.rate-plan-card__variants .variant-line:nth-of-type(odd){background:#f5f5f5}.variant-line{width:100%}.variant-line__content{flex-direction:column;row-gap:.5rem;width:100%;padding:1rem}.variant-line__actions{align-self:end;width:100%}.variant-line__actions button{width:100%}}.reservation-result{display:flex;flex-direction:column;margin-top:2rem;margin-bottom:1rem}.reservation-result__title{font-size:1.5rem;font-weight:700;text-align:center}.reservation-result__description{font-size:1.2rem;text-align:center}.hotel-information{display:flex;flex-direction:column;row-gap:.25rem;font-size:.875rem;justify-content:center;justify-items:center}@keyframes pulse{0%,to{opacity:1}50%{opacity:.5}}.accommodation-skeleton.accommodation-result .header .thumbnail,.accommodation-skeleton.accommodation-result .header .content .description,.accommodation-skeleton.accommodation-result .header .content .amenities{display:none}.accommodation-skeleton.accommodation-result .header .content .title-skeleton{width:220px;margin-bottom:0}.accommodation-skeleton .header{display:flex;flex-direction:column}@media (min-width: 768px){.accommodation-skeleton .header{flex-direction:row}}.accommodation-skeleton .header .thumbnail{width:100%;height:192px;border-top-left-radius:10px;animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite;background-color:#e0e0e0}@media (min-width: 768px){.accommodation-skeleton .header .thumbnail{width:300px}}.accommodation-skeleton .header .content{flex:1;padding:16px}.accommodation-skeleton .header .content .title-skeleton{height:32px;width:96px;margin-bottom:16px;animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite;background-color:#e0e0e0;border-radius:4px}.accommodation-skeleton .header .content .description{margin-bottom:16px;display:flex;flex-direction:column;gap:8px}.accommodation-skeleton .header .content .description .line{height:16px;width:100%;animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite;background-color:#e0e0e0;border-radius:4px}.accommodation-skeleton .header .content .description .line.line-short{width:75%}.accommodation-skeleton .header .content .amenities{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.accommodation-skeleton .header .content .amenities .amenity-item{height:32px;width:80px;animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite;background-color:#e0e0e0;border-radius:4px}.accommodation-skeleton .footer .option-header{padding:16px;display:flex;justify-content:space-between;align-items:center}.accommodation-skeleton .footer .option-header .option-title{height:24px;width:80px;animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite;background-color:#e0e0e0;border-radius:4px}.accommodation-skeleton .footer .option-header .option-value{height:24px;width:64px;animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite;background-color:#e0e0e0;border-radius:4px}.accommodation-skeleton .footer .room-option{padding:16px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start}@media (min-width: 768px){.accommodation-skeleton .footer .room-option{flex-direction:row;align-items:center}}.accommodation-skeleton .footer .room-option .option-details{display:flex;flex-direction:column;gap:8px;width:100%}@media (min-width: 768px){.accommodation-skeleton .footer .room-option .option-details{width:50%}}.accommodation-skeleton .footer .room-option .option-details .option-name{height:20px;width:192px;animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite;background-color:#e0e0e0;border-radius:4px}.accommodation-skeleton .footer .room-option .option-details .option-description{height:16px;width:128px;animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite;background-color:#e0e0e0;border-radius:4px}.accommodation-skeleton .footer .room-option .price-section{display:flex;align-items:center;margin-top:8px}@media (min-width: 768px){.accommodation-skeleton .footer .room-option .price-section{margin-top:0}}.accommodation-skeleton .footer .room-option .price-section .price{height:24px;width:64px;margin-right:16px;animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite;background-color:#e0e0e0;border-radius:4px}.accommodation-skeleton .footer .room-option .price-section .book-button{height:40px;width:96px;animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite;background-color:#e0e0e0;border-radius:4px}.icons{display:flex;align-items:end;color:#323232;fill:#323232}.scenario-text{font-size:var(--base-font);font-weight:lighter}.summary-block{position:sticky;width:auto;bottom:0;right:0;padding:1rem;box-shadow:0 -4px 54px #9e9e9e33;background:#fff;z-index:4;border-radius:10px}.summary-block__content{display:flex;justify-content:space-between;align-items:center}.summary-block__content-info{display:flex;flex-direction:column;align-items:flex-start}.summary-block__content-info__price{font-size:1rem;font-weight:700;color:#ea580c}.summary-block__content-info__text{display:flex;align-items:center;font-size:.875rem;color:#2229;vertical-align:center}.summary-block__content-info__text .icon{font-size:1rem;margin-left:.25rem}.summary-block .accommodation-summary-trigger{cursor:pointer}.summary-block .accommodation-summary-trigger:hover{color:#ea580c}@container widget (max-width: 480px){.summary-block{position:sticky;box-sizing:border-box;left:0;width:100%}}.v-popper__popper p{line-height:1;padding:.125rem 0;margin:.5rem;font-size:.875rem;color:#fff}.icon{fill:currentColor}.icon--small{width:16px}.icon-text{display:inline-flex;flex-direction:row;align-items:center;column-gap:.375rem}.icon-text__icon{display:inline-flex;color:#ea580c;flex:0 0 1rem}.icon-text__icon .icon{width:1.5rem}.icon-text__text{line-height:1}.payment-timer-container{display:flex;flex-direction:column;align-items:center;padding:20px;font-family:Arial,sans-serif}.timer-wrapper{display:flex;flex-direction:column;align-items:center;gap:8px}.timer-circle{position:relative;display:flex;align-items:center;justify-content:center}.timer-svg{transform:rotate(-90deg)}.timer-progress{transition:stroke-dashoffset 1s linear}.timer-text{position:absolute;font-size:20px;font-weight:700;color:#374151;text-align:center}.proceed-button{background-color:#3b82f6}.proceed-button:hover:not(:disabled){background-color:#2563eb}.proceed-button:disabled{background-color:#9ca3af}.no-token-message{text-align:center;color:#6b7280;font-size:16px}.no-token-message p{margin:0}', fm = {
   __name: "BookingWidget.ce",
   props: {
     start: {
@@ -8905,7 +8905,7 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
       var r;
       const i = (r = Kt()) == null ? void 0 : r.appContext.app;
       i && !i.__i18n_installed && (i.use(qn), i.__i18n_installed = !0);
-    }), kn(() => {
+    }), xn(() => {
       window.dispatchEvent(new CustomEvent("bflex:booking-widget:removed"));
     }), (i, r) => (C(), ie(qr, null, {
       default: B(() => [
@@ -8920,7 +8920,7 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
       _: 1
     }));
   }
-}, hm = /* @__PURE__ */ Qt(mm, [["styles", [fm]]]), pm = {
+}, mm = /* @__PURE__ */ kn(fm, [["styles", [dm]]]), hm = {
   __name: "App",
   props: {
     start: {
@@ -8945,7 +8945,7 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
     }
   },
   setup(e) {
-    return kn(() => {
+    return xn(() => {
       window.dispatchEvent(new CustomEvent("bflex:booking-widget:removed"));
     }), (t, n) => (C(), ie(qr, null, {
       default: B(() => [
@@ -8961,11 +8961,11 @@ const Sn = /* @__PURE__ */ Qt(Ad, [["render", $d]]), Od = {
     }));
   }
 };
-globalThis.window && window.customElements.define("bflex-booking-widget", ca(hm));
-function vm(e) {
-  ua(pm, { initOptions: e }).use(qn).mount("#bflex-booking-widget");
+globalThis.window && window.customElements.define("bflex-booking-widget", ca(mm));
+function gm(e) {
+  ua(hm, { initOptions: e }).use(qn).mount("#bflex-booking-widget");
 }
 export {
   Fr as BookingWidget,
-  vm as mountWidget
+  gm as mountWidget
 };
